@@ -1,6 +1,6 @@
-const CACHE = "science-clubs-v1";
+const CACHE = "science-clubs-v2";
 const SHELL = ["./", "index.html", "style.css", "app.js", "config.js", "manifest.webmanifest",
-  "icons/chemistry_logo.png", "icons/physics_logo.svg", "icons/icon-192.png"];
+  "icons/chemistry_logo.png", "icons/physics_logo.png", "icons/icon-192.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
