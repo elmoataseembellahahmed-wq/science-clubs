@@ -1,0 +1,16 @@
+club,type,title,description,url,date
+chemistry,file,Periodic table cheat sheet,PDF,https://example.com/periodic.pdf,2026-09-20
+chemistry,file,Titration worksheet,PDF,https://example.com/titration.pdf,2026-09-27
+chemistry,video,Indicators demo,Video 6 min,https://www.youtube.com/,2026-09-25
+chemistry,video,Balancing equations,Video 12 min,https://www.youtube.com/,2026-09-22
+chemistry,reference,Chemistry LibreTexts,Reference link,https://chem.libretexts.org,2026-09-01
+chemistry,reference,Safe lab practice guide,Reference link,https://example.com/safety,2026-09-02
+physics,file,Formula sheet: motion,PDF,https://example.com/motion.pdf,2026-09-21
+physics,file,Circuit basics notes,PDF,https://example.com/circuits.pdf,2026-09-27
+physics,video,Pendulum experiment,Video 8 min,https://www.youtube.com/,2026-09-26
+physics,video,Newton's laws explained,Video 10 min,https://www.youtube.com/,2026-09-23
+physics,reference,PhET simulations,Reference link,https://phet.colorado.edu,2026-09-01
+physics,reference,HyperPhysics,Reference link,http://hyperphysics.phy-astr.gsu.edu,2026-09-02
+joint,file,Thermodynamics: shared notes,PDF,https://example.com/thermo.pdf,2026-09-28
+joint,video,Spectroscopy in 10 minutes,Video 10 min,https://www.youtube.com/,2026-09-24
+joint,reference,Electrochemistry and circuits,Reference link,https://example.com/electro,2026-09-15
