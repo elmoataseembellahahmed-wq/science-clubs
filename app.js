@@ -11,13 +11,13 @@ const T = {
     filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Chemistry + Physics",
     recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where chemistry meets physics",
     jointBlurb: "Topics, events and materials that both clubs use.", shared: "SHARED BY BOTH CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
-    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", general: "General", items: "items", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
+    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Account", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
   ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
     chemistry: "الكيمياء", physics: "الفيزياء", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
     filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "الكيمياء + الفيزياء",
     recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي الكيمياء بالفيزياء",
     jointBlurb: "موضوعات ومواعيد ومواد يستخدمها النادِيان.", shared: "مشترك بين النادييْن", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
-    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", general: "عام", items: "عنصر", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
+    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
 const S = {
@@ -25,6 +25,8 @@ const S = {
   tab: "home", filter: "all", q: "", open: {},
   lang: store.get("lang", (navigator.language || "en").startsWith("ar") ? "ar" : "en"),
   resources: [], events: [], live: true,
+  user: (() => { try { return JSON.parse(store.get("acct", "")) || null; } catch { return null; } })(),
+  results: { state: "idle", list: [] }, acct: { mode: "login", err: "" }, form: {},
 };
 const t = (k) => T[S.lang][k];
 
@@ -38,6 +40,7 @@ const P = {
   revision: '<path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/>',
   exam: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/>',
   quiz: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5M12 17v.5"/>',
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
   reference: '<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
 };
 const icon = (n, s = 22) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${P[n]}</svg>`;
@@ -91,7 +94,76 @@ const upcoming = (list) => list.filter((e) => e.date >= today()).sort((a, b) => 
 const recentFirst = (list) => [...list].sort((a, b) => (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0) || b.i - a.i);
 const clubColor = (c) => (c === "chemistry" ? "#6D3FC7" : c === "physics" ? "#1F5FD1" : "#4B4FC9");
 
+// ---- accounts and private quiz results (needs API_URL in config.js) ----
+const NEEDS_USER = /\{user\}|%7Buser%7D/i;
+const FILL_USER = /\{user\}|%7Buser%7D/gi;
+async function api(action, data) {
+  const r = await fetch(CFG.API_URL, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify({ action, ...data }) });
+  return r.json();
+}
+function setUser(u) { S.user = u; store.set("acct", u ? JSON.stringify(u) : ""); }
+function signOut() { setUser(null); S.results = { state: "idle", list: [] }; S.acct = { mode: "login", err: "" }; S.form = {}; S.tab = "account"; render(); }
+async function loadResults() {
+  if (!CFG.API_URL || !S.user) return;
+  S.results = { state: "loading", list: S.results.list }; render(true);
+  try {
+    const r = await api("results", { token: S.user.token });
+    if (r.ok) S.results = { state: "ok", list: r.results || [] };
+    else if (r.error === "auth") { signOut(); return; }
+    else S.results = { state: "error", list: [] };
+  } catch { S.results = { state: "error", list: [] }; }
+  render(true);
+}
+async function submitAccount(form) {
+  const v = Object.fromEntries(new FormData(form));
+  const reg = S.acct.mode === "register";
+  S.form = { username: v.username, name: v.name };
+  const btn = form.querySelector("button[type=submit]");
+  btn.disabled = true; btn.textContent = t("pleaseWait");
+  try {
+    const r = await api(reg ? "register" : "login", { username: v.username, name: v.name, password: v.password });
+    if (r.ok) { setUser({ username: r.username, name: r.name, token: r.token }); S.acct.err = ""; S.form = {}; S.tab = "quizzes"; render(); loadResults(); return; }
+    S.acct.err = T[S.lang]["err_" + r.error] || t("err_generic");
+  } catch { S.acct.err = t("err_generic"); }
+  render();
+}
+function resultTile(x) {
+  const m = /([\d.]+)\s*\/\s*([\d.]+)/.exec(String(x.score));
+  const pct = m && +m[2] ? Math.round((+m[1] / +m[2]) * 100) : null;
+  const d = new Date(x.when);
+  const when = x.when && !isNaN(d) ? new Intl.DateTimeFormat(locale(), { day: "numeric", month: "short" }).format(d) : "";
+  return `<div class="card"><div class="ico">${pct === null ? icon("quiz") : `<b class="pct">${pct}%</b>`}</div><div class="grow"><b dir="auto">${esc(x.quiz)}</b><span dir="auto">${esc(x.score)}${when ? " · " + when : ""}</span></div></div>`;
+}
+function resultsBlock() {
+  if (!CFG.API_URL) return "";
+  if (!S.user) return `<button class="card" data-go="account"><div class="ico">${icon("user")}</div><div class="grow"><b>${t("signInToSee")}</b></div></button>`;
+  const R = S.results;
+  const body = R.state === "loading" || R.state === "idle" ? `<p class="note">${t("loadingRes")}</p>`
+    : R.state === "error" ? `<div class="warn">${t("resultsErr")}</div>`
+    : !R.list.length ? `<p class="note">${t("noResults")}</p>` : R.list.map(resultTile).join("");
+  return `<h2>${t("myResults")}</h2>${body}<h2>${t("quizzes")}</h2>`;
+}
+function accountScreen() {
+  if (S.user) return `<div class="hero"><small>${t("hello")}</small><b dir="auto">${esc(S.user.name)}</b><span dir="ltr">@${esc(S.user.username)}</span></div><p class="note">${t("accountNote")}</p><button class="btn ghost" data-act="signout">${t("signOut")}</button>`;
+  const reg = S.acct.mode === "register";
+  return `<div class="seg" role="group"><button data-acct-mode="login" class="${reg ? "" : "on"}">${t("signIn")}</button><button data-acct-mode="register" class="${reg ? "on" : ""}">${t("createAccount")}</button></div>
+  <form id="acct-form" class="form">
+    <label for="f-user">${t("username")}</label><input id="f-user" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" dir="ltr" required value="${esc(S.form.username || "")}">
+    ${reg ? `<label for="f-name">${t("fullName")}</label><input id="f-name" name="name" autocomplete="name" required value="${esc(S.form.name || "")}">` : ""}
+    <label for="f-pass">${t("password")}</label><input id="f-pass" name="password" type="password" autocomplete="${reg ? "new-password" : "current-password"}" minlength="6" required>
+    ${S.acct.err ? `<div class="warn" role="alert">${esc(S.acct.err)}</div>` : ""}
+    <button class="btn" type="submit">${reg ? t("createAccount") : t("signIn")}</button>
+  </form><p class="note">${t("accountNote")}</p>`;
+}
+
 function resTile(r) {
+  let url = r.url || "";
+  if (r.type === "quiz" && NEEDS_USER.test(url)) {
+    if (!CFG.API_URL) url = url.replace(FILL_USER, "");
+    else if (!S.user) return `<button class="card" data-go="account"><div class="ico">${icon("quiz")}</div><div class="grow"><b dir="auto">${esc(r.title)}</b><span>${t("signInFirst")}</span></div></button>`;
+    else url = url.replace(FILL_USER, encodeURIComponent(S.user.username));
+  }
+  r = { ...r, url };
   return `<a class="card" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener"><div class="ico">${icon(r.type)}</div><div class="grow"><b dir="auto">${esc(r.title)}</b><span dir="auto">${esc(r.desc)}</span></div></a>`;
 }
 function evTile(e) {
@@ -146,7 +218,7 @@ function eventsScreen() {
 }
 function quizzesScreen() {
   const list = recentFirst(S.resources.filter((r) => r.type === "quiz" && (r.club === S.club || r.club === "joint")));
-  return `<div class="hero"><small>${t("quizzes")}</small><b>${t("quizTitle")}</b><span>${t("quizAll")}</span></div>${list.map((r) => resTile({ ...r, desc: [r.lo, r.desc].filter(Boolean).join(" · ") })).join("") || empty()}`;
+  return `<div class="hero"><small>${t("quizzes")}</small><b>${t("quizTitle")}</b><span>${t("quizAll")}</span></div>${resultsBlock()}${list.map((r) => resTile({ ...r, desc: [r.lo, r.desc].filter(Boolean).join(" · ") })).join("") || empty()}`;
 }
 function revisionScreen() {
   const list = S.resources.filter((r) => SEPARATE.includes(r.type) && (r.club === S.club || r.club === "joint"));
@@ -171,15 +243,18 @@ function render(keep) {
   const root = document.documentElement;
   root.dataset.club = S.club; root.lang = S.lang; root.dir = S.lang === "ar" ? "rtl" : "ltr";
   document.querySelector('meta[name="theme-color"]').content = clubColor(S.club);
-  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, joint: jointScreen };
-  const titles = { home: t("app"), library: t("library"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace") };
-  const subs = { home: t("tagline"), library: `${t("files")} · ${t("videos")} · ${t("refs")}`, events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}` };
-  const showSwitch = S.tab !== "joint";
-  const logo = S.tab === "joint" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
+  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, joint: jointScreen, account: accountScreen };
+  const titles = { home: t("app"), library: t("library"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), account: t("account") };
+  const subs = { home: t("tagline"), library: `${t("files")} · ${t("videos")} · ${t("refs")}`, events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, account: t("accountSub") };
+  const showSwitch = S.tab !== "joint" && S.tab !== "account";
+  const logo = S.tab === "joint" || S.tab === "account" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
   const app = document.getElementById("app");
+  const fu = document.getElementById("f-user"), fn = document.getElementById("f-name");
+  if (fu) S.form.username = fu.value;
+  if (fn) S.form.name = fn.value;
   const keepFocusQ = document.activeElement?.id === "q";
   app.innerHTML = `<header><div class="top">${logo}<div class="t"><div class="title">${titles[S.tab]}</div><div class="sub">${subs[S.tab]}</div></div>
-    <button class="icon-btn" data-act="refresh" aria-label="${t("refresh")}">↻</button><button class="icon-btn" data-act="lang">${t("lang")}</button></div>
+    ${CFG.API_URL ? `<button class="icon-btn${S.user ? " me" : ""}" data-go="account" aria-label="${t("account")}">${icon("user", 20)}</button>` : ""}<button class="icon-btn" data-act="refresh" aria-label="${t("refresh")}">↻</button><button class="icon-btn" data-act="lang">${t("lang")}</button></div>
     ${showSwitch ? `<div class="switch" role="group">${["chemistry", "physics"].map((c) => `<button data-club="${c}" class="${S.club === c ? "on" : ""}" aria-pressed="${S.club === c}">${t(c)}</button>`).join("")}</div>` : ""}</header>
   <main>${S.live ? "" : `<div class="warn">${t("offline")}</div>`}${screens[S.tab]()}</main>
   <nav>${[["home", "home"], ["library", "book"], ["events", "cal"], ["quizzes", "quiz"], ["revision", "revision"], ["joint", "joint"]].map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k ? "on" : ""}">${icon(ic)}<span>${t(k)}</span></button>`).join("")}</nav>`;
@@ -188,20 +263,26 @@ function render(keep) {
 }
 
 document.addEventListener("click", (e) => {
-  const el = e.target.closest("[data-go],[data-club],[data-act],[data-filter-set],[data-lo]");
-  if (!el) return;
+  const el = e.target.closest("[data-go],[data-club],[data-act],[data-filter-set],[data-lo],[data-acct-mode]");
+  // the <html> element carries data-club too, so ignore anything outside the app
+  if (!el || !document.getElementById("app").contains(el)) return;
   if (el.dataset.lo) { S.open[el.dataset.lo] = el.dataset.open !== "1"; render(true); return; }
+  if (el.dataset.acctMode) { S.acct.mode = el.dataset.acctMode; S.acct.err = ""; render(); return; }
+  if (el.dataset.act === "signout") { signOut(); return; }
   if (el.dataset.club) { S.club = el.dataset.club; store.set("club", S.club); }
   else if (el.dataset.filterSet) S.filter = el.dataset.filterSet;
   else if (el.dataset.go) { S.tab = el.dataset.go; S.filter = el.dataset.filter || "all"; S.q = ""; }
   else if (el.dataset.act === "lang") { S.lang = S.lang === "ar" ? "en" : "ar"; store.set("lang", S.lang); }
-  else if (el.dataset.act === "refresh") { loadAll(); return; }
+  else if (el.dataset.act === "refresh") { loadAll(); loadResults(); return; }
   render();
+  if (el.dataset.go === "quizzes") loadResults();
 });
 document.addEventListener("input", (e) => { if (e.target.id === "q") { S.q = e.target.value; render(true); } });
-document.addEventListener("visibilitychange", () => { if (!document.hidden) loadAll(); });
+document.addEventListener("submit", (e) => { if (e.target.id === "acct-form") { e.preventDefault(); submitAccount(e.target); } });
+document.addEventListener("visibilitychange", () => { if (!document.hidden) { loadAll(); if (S.tab === "quizzes") loadResults(); } });
 
 render();
 loadAll();
+if (S.user) loadResults();
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 })();
