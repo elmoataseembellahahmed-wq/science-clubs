@@ -1,4 +1,4 @@
-const CACHE = "science-clubs-v2";
+const CACHE = "science-clubs-v3";
 const SHELL = ["./", "index.html", "style.css", "app.js", "config.js", "manifest.webmanifest",
   "icons/chemistry_logo.png", "icons/physics_logo.png", "icons/icon-192.png"];
 
@@ -14,7 +14,7 @@ self.addEventListener("fetch", (e) => {
   const req = e.request;
   if (req.method !== "GET" || new URL(req.url).origin !== location.origin) return;
   e.respondWith(
-    fetch(req).then((res) => {
+    fetch(req, { cache: "no-cache" }).then((res) => {
       const copy = res.clone();
       caches.open(CACHE).then((c) => c.put(req, copy));
       return res;
