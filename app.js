@@ -11,13 +11,13 @@ const T = {
     filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Chemistry + Physics",
     recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where chemistry meets physics",
     jointBlurb: "Topics, events and materials that both clubs use.", shared: "SHARED BY BOTH CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
-    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", general: "General", items: "items", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
+    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", general: "General", items: "items", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
   ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
     chemistry: "الكيمياء", physics: "الفيزياء", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
     filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "الكيمياء + الفيزياء",
     recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي الكيمياء بالفيزياء",
     jointBlurb: "موضوعات ومواعيد ومواد يستخدمها النادِيان.", shared: "مشترك بين النادييْن", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
-    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", general: "عام", items: "عنصر", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
+    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", general: "عام", items: "عنصر", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
 const S = {
@@ -35,6 +35,8 @@ const P = {
   joint: '<circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/>',
   file: '<path d="M6 2h8l5 5v15H6z"/><path d="M14 2v5h5"/>',
   video: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/>',
+  revision: '<path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/>',
+  exam: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/>',
   quiz: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5M12 17v.5"/>',
   reference: '<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
 };
@@ -60,7 +62,7 @@ function parseCsv(text) {
   return rows.slice(1).filter((r) => r.some((x) => x.trim())).map((r) => Object.fromEntries(head.map((h, i) => [h, (r[i] ?? "").trim()])));
 }
 const CLUBS = { chemistry: "chemistry", "كيمياء": "chemistry", "الكيمياء": "chemistry", physics: "physics", "فيزياء": "physics", "الفيزياء": "physics", joint: "joint", "مشترك": "joint" };
-const TYPES = { file: "file", "ملف": "file", video: "video", "فيديو": "video", reference: "reference", link: "reference", quiz: "quiz", "كويز": "quiz", "اختبار": "quiz", "مرجع": "reference", "لينك": "reference" };
+const TYPES = { file: "file", "ملف": "file", video: "video", "فيديو": "video", reference: "reference", link: "reference", revision: "revision", "مراجعة": "revision", exam: "exam", "امتحان": "exam", quiz: "quiz", "كويز": "quiz", "اختبار": "quiz", "مرجع": "reference", "لينك": "reference" };
 function parseDate(s) { const m = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(s || ""); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; }
 
 async function loadCsv(url, key) {
@@ -102,35 +104,38 @@ function evTile(e) {
 const empty = () => `<p class="note">${t("empty")}</p>`;
 
 // ---- learning objectives (LO) ----
-const TYPE_ORDER = { file: 0, video: 1, reference: 2, quiz: 3 };
+const TYPE_ORDER = { file: 0, video: 1, reference: 2, revision: 3, exam: 3, quiz: 4 };
 function groupByLo(items) {
   const m = new Map();
   [...items].sort((a, b) => a.i - b.i).forEach((r) => { if (!m.has(r.lo)) m.set(r.lo, []); m.get(r.lo).push(r); });
   const secs = [...m.entries()].map(([key, list]) => ({ key, list: list.sort((a, b) => TYPE_ORDER[a.type] - TYPE_ORDER[b.type] || (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0) || a.i - b.i) }));
   return secs.sort((a, b) => (a.key === "") - (b.key === ""));
 }
+function secHtml(id, title, list, open) {
+  return `<section class="lo"><button class="lo-head" data-lo="${esc(id)}" data-open="${open ? 1 : 0}" aria-expanded="${open}"><span class="grow"><b dir="auto">${esc(title)}</b><span>${list.length} ${t("items")}</span></span><span class="chev" aria-hidden="true">${open ? "−" : "+"}</span></button>${open ? `<div class="lo-body">${list.map(resTile).join("")}</div>` : ""}</section>`;
+}
 function loSections(scope, items, forceOpen) {
   return groupByLo(items).map((sec, n) => {
     const id = scope + "|" + sec.key;
-    const open = S.open[id] ?? (forceOpen || n === 0);
-    return `<section class="lo"><button class="lo-head" data-lo="${esc(id)}" data-open="${open ? 1 : 0}" aria-expanded="${open}"><span class="grow"><b dir="auto">${esc(sec.key || t("general"))}</b><span>${sec.list.length} ${t("items")}</span></span><span class="chev" aria-hidden="true">${open ? "−" : "+"}</span></button>${open ? `<div class="lo-body">${sec.list.map(resTile).join("")}</div>` : ""}</section>`;
+    return secHtml(id, sec.key || t("general"), sec.list, S.open[id] ?? (forceOpen || n === 0));
   }).join("");
 }
+const SEPARATE = ["revision", "exam"]; // shown only in the Revision & Exams tab
 
 // ---- screens ----
 function home() {
   const evs = upcoming(S.events.filter((e) => e.club === S.club || e.club === "joint"));
   const next = evs[0];
   const when = next ? new Intl.DateTimeFormat(locale(), { weekday: "long", day: "numeric", month: "long" }).format(next.date) + [next.time && " · " + next.time, next.place && " · " + next.place].filter(Boolean).join("") : "";
-  const recent = recentFirst(S.resources.filter((r) => r.club === S.club && r.type !== "quiz")).slice(0, 3);
+  const recent = recentFirst(S.resources.filter((r) => r.club === S.club && r.type !== "quiz" && !SEPARATE.includes(r.type))).slice(0, 3);
   const tile = (ic, b, s, tab, f, wide) => `<button class="tile${wide ? " wide" : ""}" data-go="${tab}" data-filter="${f || "all"}">${icon(ic, 26)}<b>${t(b)}</b><span>${t(s)}</span></button>`;
   return `<div class="hero"><small>${t("next")}</small><b dir="auto">${next ? esc(next.title) : t("noNext")}</b><span dir="auto">${esc(when)}</span></div>
-  <div class="grid">${tile("file", "files", "filesSub", "library", "file")}${tile("video", "videos", "videosSub", "library", "video")}${tile("reference", "refs", "refsSub", "library", "reference")}${tile("quiz", "quizzes", "quizzesSub", "quizzes")}${tile("joint", "jointSpace", "jointSub", "joint", "all", true)}</div>
+  <div class="grid">${tile("file", "files", "filesSub", "library", "file")}${tile("video", "videos", "videosSub", "library", "video")}${tile("reference", "refs", "refsSub", "library", "reference")}${tile("revision", "revision", "revisionSub", "revision")}${tile("quiz", "quizzes", "quizzesSub", "quizzes")}${tile("joint", "jointSpace", "jointSub", "joint", "all", true)}</div>
   <h2>${t("recent")}</h2>${recent.map(resTile).join("") || empty()}`;
 }
 function library() {
   const q = S.q.trim().toLowerCase();
-  const items = recentFirst(S.resources.filter((r) => r.club === S.club && (S.filter === "all" || r.type === S.filter) && (!q || (r.title + " " + r.desc).toLowerCase().includes(q))));
+  const items = recentFirst(S.resources.filter((r) => r.club === S.club && !SEPARATE.includes(r.type) && (S.filter === "all" || r.type === S.filter) && (!q || (r.title + " " + r.desc).toLowerCase().includes(q))));
   const chip = (k, l) => `<button data-filter-set="${k}" class="${S.filter === k ? "on" : ""}">${t(l)}</button>`;
   return `<input type="search" id="q" placeholder="${t("search")}" aria-label="${t("search")}" value="${esc(S.q)}">
   <div class="chips">${chip("all", "all")}${chip("file", "files")}${chip("video", "videos")}${chip("reference", "refs")}${chip("quiz", "quizzes")}</div>${loSections(S.club, items, !!q || S.filter !== "all") || empty()}`;
@@ -143,8 +148,18 @@ function quizzesScreen() {
   const list = recentFirst(S.resources.filter((r) => r.type === "quiz" && (r.club === S.club || r.club === "joint")));
   return `<div class="hero"><small>${t("quizzes")}</small><b>${t("quizTitle")}</b><span>${t("quizAll")}</span></div>${list.map((r) => resTile({ ...r, desc: [r.lo, r.desc].filter(Boolean).join(" · ") })).join("") || empty()}`;
 }
+function revisionScreen() {
+  const list = S.resources.filter((r) => SEPARATE.includes(r.type) && (r.club === S.club || r.club === "joint"));
+  const groups = [["revision", "revisionMaterial"], ["exam", "exams"]].map(([ty, label]) => {
+    const items = recentFirst(list.filter((r) => r.type === ty));
+    if (!items.length) return "";
+    const id = S.club + "-rev|" + ty;
+    return secHtml(id, t(label), items, S.open[id] ?? true);
+  }).join("");
+  return `<div class="hero"><small>${t("revision")}</small><b>${t("revisionTitle")}</b><span>${t("revisionAll")}</span></div>${groups || empty()}`;
+}
 function jointScreen() {
-  const res = recentFirst(S.resources.filter((r) => r.club === "joint"));
+  const res = recentFirst(S.resources.filter((r) => r.club === "joint" && !SEPARATE.includes(r.type)));
   const evs = upcoming(S.events.filter((e) => e.club === "joint"));
   return `<div class="hero joint"><small>${t("shared")}</small><b>${t("jointTitle")}</b><span>${t("jointBlurb")}</span></div>
   <h2>${t("sharedMaterials")}</h2>${loSections("joint", res, false) || empty()}<h2>${t("jointEvents")}</h2>${evs.map(evTile).join("") || empty()}`;
@@ -156,9 +171,9 @@ function render(keep) {
   const root = document.documentElement;
   root.dataset.club = S.club; root.lang = S.lang; root.dir = S.lang === "ar" ? "rtl" : "ltr";
   document.querySelector('meta[name="theme-color"]').content = clubColor(S.club);
-  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, joint: jointScreen };
-  const titles = { home: t("app"), library: t("library"), events: t("events"), quizzes: t("quizzes"), joint: t("jointSpace") };
-  const subs = { home: t("tagline"), library: `${t("files")} · ${t("videos")} · ${t("refs")}`, events: t("upcoming"), quizzes: t("quizzesSub"), joint: `${t("chemistry")} + ${t("physics")}` };
+  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, joint: jointScreen };
+  const titles = { home: t("app"), library: t("library"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace") };
+  const subs = { home: t("tagline"), library: `${t("files")} · ${t("videos")} · ${t("refs")}`, events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}` };
   const showSwitch = S.tab !== "joint";
   const logo = S.tab === "joint" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
   const app = document.getElementById("app");
@@ -167,7 +182,7 @@ function render(keep) {
     <button class="icon-btn" data-act="refresh" aria-label="${t("refresh")}">↻</button><button class="icon-btn" data-act="lang">${t("lang")}</button></div>
     ${showSwitch ? `<div class="switch" role="group">${["chemistry", "physics"].map((c) => `<button data-club="${c}" class="${S.club === c ? "on" : ""}" aria-pressed="${S.club === c}">${t(c)}</button>`).join("")}</div>` : ""}</header>
   <main>${S.live ? "" : `<div class="warn">${t("offline")}</div>`}${screens[S.tab]()}</main>
-  <nav>${[["home", "home"], ["library", "book"], ["events", "cal"], ["quizzes", "quiz"], ["joint", "joint"]].map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k ? "on" : ""}">${icon(ic)}<span>${t(k)}</span></button>`).join("")}</nav>`;
+  <nav>${[["home", "home"], ["library", "book"], ["events", "cal"], ["quizzes", "quiz"], ["revision", "revision"], ["joint", "joint"]].map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k ? "on" : ""}">${icon(ic)}<span>${t(k)}</span></button>`).join("")}</nav>`;
   if (prev) document.querySelector("main").scrollTop = prev;
   if (keepFocusQ) { const q = document.getElementById("q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
 }
