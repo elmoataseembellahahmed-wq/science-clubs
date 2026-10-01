@@ -11,13 +11,13 @@ const T = {
     filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Chemistry + Physics",
     recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where chemistry meets physics",
     jointBlurb: "Topics, events and materials that both clubs use.", shared: "SHARED BY BOTH CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
-    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Account", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
+    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Account", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
   ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
     chemistry: "الكيمياء", physics: "الفيزياء", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
     filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "الكيمياء + الفيزياء",
     recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي الكيمياء بالفيزياء",
     jointBlurb: "موضوعات ومواعيد ومواد يستخدمها النادِيان.", shared: "مشترك بين النادييْن", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
-    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
+    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
 const S = {
@@ -77,11 +77,19 @@ async function loadCsv(url, key) {
     return { text, live: true };
   } catch { return { text: store.get(key, ""), live: false }; }
 }
+const toRes = (rows, base, forceType) => rows.map((x, i) => ({ club: CLUBS[x.club?.toLowerCase()] || null, type: forceType ? forceType(x) : (TYPES[x.type?.toLowerCase()] || "reference"),
+  title: x.title, desc: x.description, url: x.url, lo: (x.lo || "").trim(), date: parseDate(x.date), i: base + i })).filter((x) => x.club && x.title);
 async function loadAll() {
-  const [r, e] = await Promise.all([loadCsv(CFG.RESOURCES_CSV, "csv_res"), loadCsv(CFG.EVENTS_CSV, "csv_evt")]);
-  S.live = r.live && e.live;
-  S.resources = parseCsv(r.text).map((x, i) => ({ club: CLUBS[x.club?.toLowerCase()] || null, type: TYPES[x.type?.toLowerCase()] || "reference",
-    title: x.title, desc: x.description, url: x.url, lo: (x.lo || "").trim(), date: parseDate(x.date), i })).filter((x) => x.club && x.title);
+  // References and Revision can have their own published sheet (REFERENCES_CSV, REVISION_CSV in config.js).
+  // Rows of those types in the main resources sheet still show up too.
+  const extra = (u, k) => (u ? loadCsv(u, k) : Promise.resolve({ text: "", live: true }));
+  const [r, e, rf, rv] = await Promise.all([loadCsv(CFG.RESOURCES_CSV, "csv_res"), loadCsv(CFG.EVENTS_CSV, "csv_evt"), extra(CFG.REFERENCES_CSV, "csv_ref"), extra(CFG.REVISION_CSV, "csv_rev")]);
+  S.live = r.live && e.live && rf.live && rv.live;
+  S.resources = [
+    ...toRes(parseCsv(r.text), 0),
+    ...toRes(parseCsv(rf.text), 10000, () => "reference"),
+    ...toRes(parseCsv(rv.text), 20000, (x) => (TYPES[x.type?.toLowerCase()] === "exam" ? "exam" : "revision")),
+  ];
   S.events = parseCsv(e.text).map((x) => ({ club: CLUBS[x.club?.toLowerCase()] || null, title: x.title, date: parseDate(x.date), time: x.time, place: x.place, note: x.note }))
     .filter((x) => x.club && x.title && x.date);
   render();
@@ -192,36 +200,40 @@ function loSections(scope, items, forceOpen) {
     return secHtml(id, sec.key || t("general"), sec.list, S.open[id] ?? (forceOpen || n === 0));
   }).join("");
 }
-const SEPARATE = ["revision", "exam"]; // shown only in the Revision & Exams tab
+const OWN_PAGE = ["reference", "revision", "exam", "quiz"]; // these never appear in the Library (LOs) page
 
 // ---- screens ----
 function home() {
   const evs = upcoming(S.events.filter((e) => e.club === S.club || e.club === "joint"));
   const next = evs[0];
   const when = next ? new Intl.DateTimeFormat(locale(), { weekday: "long", day: "numeric", month: "long" }).format(next.date) + [next.time && " · " + next.time, next.place && " · " + next.place].filter(Boolean).join("") : "";
-  const recent = recentFirst(S.resources.filter((r) => r.club === S.club && r.type !== "quiz" && !SEPARATE.includes(r.type))).slice(0, 3);
+  const recent = recentFirst(S.resources.filter((r) => r.club === S.club && !OWN_PAGE.includes(r.type))).slice(0, 3);
   const tile = (ic, b, s, tab, f, wide) => `<button class="tile${wide ? " wide" : ""}" data-go="${tab}" data-filter="${f || "all"}">${icon(ic, 26)}<b>${t(b)}</b><span>${t(s)}</span></button>`;
   return `<div class="hero"><small>${t("next")}</small><b dir="auto">${next ? esc(next.title) : t("noNext")}</b><span dir="auto">${esc(when)}</span></div>
-  <div class="grid">${tile("file", "files", "filesSub", "library", "file")}${tile("video", "videos", "videosSub", "library", "video")}${tile("reference", "refs", "refsSub", "library", "reference")}${tile("revision", "revision", "revisionSub", "revision")}${tile("quiz", "quizzes", "quizzesSub", "quizzes")}${tile("joint", "jointSpace", "jointSub", "joint", "all", true)}</div>
+  <div class="grid">${tile("book", "los", "losSub", "library")}${tile("reference", "refs", "refsSub", "references")}${tile("revision", "revision", "revisionSub", "revision")}${tile("quiz", "quizzes", "quizzesSub", "quizzes")}${tile("joint", "jointSpace", "jointSub", "joint", "all", true)}</div>
   <h2>${t("recent")}</h2>${recent.map(resTile).join("") || empty()}`;
 }
 function library() {
   const q = S.q.trim().toLowerCase();
-  const items = recentFirst(S.resources.filter((r) => r.club === S.club && !SEPARATE.includes(r.type) && (S.filter === "all" || r.type === S.filter) && (!q || (r.title + " " + r.desc).toLowerCase().includes(q))));
-  const chip = (k, l) => `<button data-filter-set="${k}" class="${S.filter === k ? "on" : ""}">${t(l)}</button>`;
+  const items = recentFirst(S.resources.filter((r) => r.club === S.club && !OWN_PAGE.includes(r.type) && (!q || (r.title + " " + r.desc).toLowerCase().includes(q))));
   return `<input type="search" id="q" placeholder="${t("search")}" aria-label="${t("search")}" value="${esc(S.q)}">
-  <div class="chips">${chip("all", "all")}${chip("file", "files")}${chip("video", "videos")}${chip("reference", "refs")}${chip("quiz", "quizzes")}</div>${loSections(S.club, items, !!q || S.filter !== "all") || empty()}`;
+  ${loSections(S.club, items, !!q) || empty()}`;
 }
 function eventsScreen() {
   const list = upcoming(S.events.filter((e) => e.club === S.club || e.club === "joint"));
   return `<h2>${t("upcoming")}</h2>${list.map(evTile).join("") || empty()}`;
+}
+function referencesScreen() {
+  const list = recentFirst(S.resources.filter((r) => r.type === "reference" && (r.club === S.club || r.club === "joint")));
+  const body = list.some((r) => r.lo) ? loSections(S.club + "-ref", list, true) : list.map(resTile).join("");
+  return `<div class="hero"><small>${t("refs")}</small><b>${t("refsTitle")}</b><span>${t("refsPageSub")}</span></div>${body || empty()}`;
 }
 function quizzesScreen() {
   const list = recentFirst(S.resources.filter((r) => r.type === "quiz" && (r.club === S.club || r.club === "joint")));
   return `<div class="hero"><small>${t("quizzes")}</small><b>${t("quizTitle")}</b><span>${t("quizAll")}</span></div>${resultsBlock()}${list.map((r) => resTile({ ...r, desc: [r.lo, r.desc].filter(Boolean).join(" · ") })).join("") || empty()}`;
 }
 function revisionScreen() {
-  const list = S.resources.filter((r) => SEPARATE.includes(r.type) && (r.club === S.club || r.club === "joint"));
+  const list = S.resources.filter((r) => ["revision", "exam"].includes(r.type) && (r.club === S.club || r.club === "joint"));
   const groups = [["revision", "revisionMaterial"], ["exam", "exams"]].map(([ty, label]) => {
     const items = recentFirst(list.filter((r) => r.type === ty));
     if (!items.length) return "";
@@ -231,7 +243,7 @@ function revisionScreen() {
   return `<div class="hero"><small>${t("revision")}</small><b>${t("revisionTitle")}</b><span>${t("revisionAll")}</span></div>${groups || empty()}`;
 }
 function jointScreen() {
-  const res = recentFirst(S.resources.filter((r) => r.club === "joint" && !SEPARATE.includes(r.type)));
+  const res = recentFirst(S.resources.filter((r) => r.club === "joint" && !OWN_PAGE.includes(r.type)));
   const evs = upcoming(S.events.filter((e) => e.club === "joint"));
   return `<div class="hero joint"><small>${t("shared")}</small><b>${t("jointTitle")}</b><span>${t("jointBlurb")}</span></div>
   <h2>${t("sharedMaterials")}</h2>${loSections("joint", res, false) || empty()}<h2>${t("jointEvents")}</h2>${evs.map(evTile).join("") || empty()}`;
@@ -243,17 +255,18 @@ function render(keep) {
   const root = document.documentElement;
   root.dataset.club = S.club; root.lang = S.lang; root.dir = S.lang === "ar" ? "rtl" : "ltr";
   document.querySelector('meta[name="theme-color"]').content = clubColor(S.club);
-  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, joint: jointScreen, account: accountScreen };
-  const titles = { home: t("app"), library: t("library"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), account: t("account") };
-  const subs = { home: t("tagline"), library: `${t("files")} · ${t("videos")} · ${t("refs")}`, events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, account: t("accountSub") };
+  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, references: referencesScreen, joint: jointScreen, account: accountScreen };
+  const titles = { home: t("app"), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), account: t("account") };
+  const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, account: t("accountSub") };
   const showSwitch = S.tab !== "joint" && S.tab !== "account";
   const logo = S.tab === "joint" || S.tab === "account" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
+  const back = S.tab === "references" ? `<button class="icon-btn" data-go="home" aria-label="${t("back")}">${S.lang === "ar" ? "→" : "←"}</button>` : "";
   const app = document.getElementById("app");
   const fu = document.getElementById("f-user"), fn = document.getElementById("f-name");
   if (fu) S.form.username = fu.value;
   if (fn) S.form.name = fn.value;
   const keepFocusQ = document.activeElement?.id === "q";
-  app.innerHTML = `<header><div class="top">${logo}<div class="t"><div class="title">${titles[S.tab]}</div><div class="sub">${subs[S.tab]}</div></div>
+  app.innerHTML = `<header><div class="top">${back}${logo}<div class="t"><div class="title">${titles[S.tab]}</div><div class="sub">${subs[S.tab]}</div></div>
     ${CFG.API_URL ? `<button class="icon-btn${S.user ? " me" : ""}" data-go="account" aria-label="${t("account")}">${icon("user", 20)}</button>` : ""}<button class="icon-btn" data-act="refresh" aria-label="${t("refresh")}">↻</button><button class="icon-btn" data-act="lang">${t("lang")}</button></div>
     ${showSwitch ? `<div class="switch" role="group">${["chemistry", "physics"].map((c) => `<button data-club="${c}" class="${S.club === c ? "on" : ""}" aria-pressed="${S.club === c}">${t(c)}</button>`).join("")}</div>` : ""}</header>
   <main>${S.live ? "" : `<div class="warn">${t("offline")}</div>`}${screens[S.tab]()}</main>
