@@ -260,7 +260,7 @@ function render(keep) {
   const titles = { home: t("app"), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), account: t("account") };
   const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, account: t("accountSub") };
   const showSwitch = S.tab !== "joint" && S.tab !== "account";
-  const logo = S.tab === "joint" || S.tab === "account" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
+  const logo = S.tab === "home" ? `<img src="icons/combined_logo.png" alt="" style="border-radius:50%;width:52px;height:52px">` : S.tab === "joint" || S.tab === "account" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
   const back = CHILD.includes(S.tab) ? `<button class="icon-btn" data-go="home" aria-label="${t("back")}">${S.lang === "ar" ? "→" : "←"}</button>` : "";
   const app = document.getElementById("app");
   const fu = document.getElementById("f-user"), fn = document.getElementById("f-name");
