@@ -203,12 +203,14 @@ document.addEventListener("click", (e) => {
   if (e.target.closest("[data-vclose]")) { closeViewer(); return; }
   const dl = e.target.closest("[data-vdl]");
   if (dl) {
-    // start the download from a hidden frame so the person never leaves the app
-    const f = document.createElement("iframe");
-    f.style.display = "none";
-    f.src = dl.dataset.vdl;
-    document.body.appendChild(f);
-    setTimeout(() => f.remove(), 120000);
+    // Direct download: the file is an attachment, so the browser keeps the app open and just saves it
+    const a = document.createElement("a");
+    a.href = dl.dataset.vdl;
+    a.rel = "noopener";
+    a.setAttribute("download", "");
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
     const old = dl.textContent;
     dl.textContent = t("downloading");
     setTimeout(() => { dl.textContent = old; }, 4000);
