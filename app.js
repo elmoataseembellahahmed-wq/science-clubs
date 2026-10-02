@@ -168,7 +168,7 @@ function accountScreen() {
 function viewInfo(u) {
   let m;
   if ((m = u.match(/^https?:\/\/drive\.google\.com\/file\/d\/([\w-]+)/) || u.match(/^https?:\/\/drive\.google\.com\/(?:open|uc)\?(?:[^#]*&)?id=([\w-]+)/)))
-    return { embed: `https://drive.google.com/file/d/${m[1]}/preview`, dl: `https://drive.google.com/uc?export=download&id=${m[1]}` };
+    return { embed: `https://drive.google.com/file/d/${m[1]}/preview`, dl: `https://drive.usercontent.google.com/download?id=${m[1]}&export=download&confirm=t` };
   if ((m = u.match(/^https?:\/\/docs\.google\.com\/(document|presentation|spreadsheets)\/d\/([\w-]+)/)))
     return { embed: `https://docs.google.com/${m[1]}/d/${m[2]}/preview`, dl: m[1] === "presentation" ? `https://docs.google.com/presentation/d/${m[2]}/export/pdf` : `https://docs.google.com/${m[1]}/d/${m[2]}/export?format=pdf` };
   if ((m = u.match(/^https?:\/\/(?:www\.|m\.)?youtube\.com\/watch\?(?:[^#]*&)?v=([\w-]{11})/) || u.match(/^https?:\/\/youtu\.be\/([\w-]{11})/)))
