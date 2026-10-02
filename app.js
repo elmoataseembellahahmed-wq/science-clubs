@@ -11,13 +11,13 @@ const T = {
     filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Chemistry + Physics",
     recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where chemistry meets physics",
     jointBlurb: "Topics, events and materials that both clubs use.", shared: "SHARED BY BOTH CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
-    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Profile", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
+    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Profile", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", download: "Download", openExt: "Open in browser", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
   ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
     chemistry: "الكيمياء", physics: "الفيزياء", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
     filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "الكيمياء + الفيزياء",
     recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي الكيمياء بالفيزياء",
     jointBlurb: "موضوعات ومواعيد ومواد يستخدمها النادِيان.", shared: "مشترك بين النادييْن", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
-    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
+    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", download: "تحميل", openExt: "فتح في المتصفح", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
 const S = {
@@ -164,6 +164,47 @@ function accountScreen() {
   </form><p class="note">${t("accountNote")}</p>`;
 }
 
+// Opens Google Drive / Docs / YouTube links inside the app instead of leaving it
+function viewInfo(u) {
+  let m;
+  if ((m = u.match(/^https?:\/\/drive\.google\.com\/file\/d\/([\w-]+)/) || u.match(/^https?:\/\/drive\.google\.com\/(?:open|uc)\?(?:[^#]*&)?id=([\w-]+)/)))
+    return { embed: `https://drive.google.com/file/d/${m[1]}/preview`, dl: `https://drive.google.com/uc?export=download&id=${m[1]}` };
+  if ((m = u.match(/^https?:\/\/docs\.google\.com\/(document|presentation|spreadsheets)\/d\/([\w-]+)/)))
+    return { embed: `https://docs.google.com/${m[1]}/d/${m[2]}/preview`, dl: m[1] === "presentation" ? `https://docs.google.com/presentation/d/${m[2]}/export/pdf` : `https://docs.google.com/${m[1]}/d/${m[2]}/export?format=pdf` };
+  if ((m = u.match(/^https?:\/\/(?:www\.|m\.)?youtube\.com\/watch\?(?:[^#]*&)?v=([\w-]{11})/) || u.match(/^https?:\/\/youtu\.be\/([\w-]{11})/)))
+    return { embed: `https://www.youtube.com/embed/${m[1]}`, dl: "" };
+  return null;
+}
+
+function openViewer(url, title) {
+  const v = viewInfo(url);
+  if (!v) { window.open(url, "_blank", "noopener"); return; }
+  closeViewer(true);
+  const d = document.createElement("div");
+  d.id = "viewer";
+  d.style.cssText = "position:fixed;inset:0;z-index:50;max-width:480px;margin:0 auto;background:#fff;display:flex;flex-direction:column";
+  const bs = "min-width:44px;height:44px;border:1px solid #E6E4EE;background:#fff;border-radius:12px;font-weight:600;font-size:14px;color:#1E1B2E;display:flex;align-items:center;justify-content:center;padding:0 12px;text-decoration:none;flex-shrink:0";
+  d.innerHTML = `<div style="display:flex;align-items:center;gap:8px;padding:calc(10px + env(safe-area-inset-top)) 12px 10px;border-bottom:1px solid #E6E4EE">
+    <button data-vclose style="${bs}" aria-label="${t("back")}">${S.lang === "ar" ? "→" : "←"}</button>
+    <b dir="auto" style="flex:1;min-width:0;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(title)}</b>
+    ${v.dl ? `<a href="${esc(v.dl)}" target="_blank" rel="noopener" style="${bs};background:var(--accent);border-color:var(--accent);color:#fff">${t("download")}</a>` : `<a href="${esc(url)}" target="_blank" rel="noopener" style="${bs}">${t("openExt")}</a>`}</div>
+    <iframe src="${esc(v.embed)}" allow="autoplay; fullscreen" allowfullscreen style="flex:1;width:100%;border:0"></iframe>`;
+  document.body.appendChild(d);
+  history.pushState({ viewer: 1 }, "");
+}
+function closeViewer(silent) {
+  const d = document.getElementById("viewer");
+  if (!d) return;
+  d.remove();
+  if (!silent && history.state && history.state.viewer) history.back();
+}
+window.addEventListener("popstate", () => closeViewer(true));
+document.addEventListener("click", (e) => {
+  if (e.target.closest("[data-vclose]")) { closeViewer(); return; }
+  const b = e.target.closest("[data-view]");
+  if (b) openViewer(b.dataset.view, b.dataset.title);
+});
+
 function resTile(r) {
   let url = r.url || "";
   if (r.type === "quiz" && NEEDS_USER.test(url)) {
@@ -172,6 +213,7 @@ function resTile(r) {
     else url = url.replace(FILL_USER, encodeURIComponent(S.user.username));
   }
   r = { ...r, url };
+  if (r.type !== "quiz" && viewInfo(url)) return `<button class="card" data-view="${esc(url)}" data-title="${esc(r.title)}"><div class="ico">${icon(r.type)}</div><div class="grow"><b dir="auto">${esc(r.title)}</b><span dir="auto">${esc(r.desc)}</span></div></button>`;
   return `<a class="card" href="${esc(safeUrl(r.url))}" target="_blank" rel="noopener"><div class="ico">${icon(r.type)}</div><div class="grow"><b dir="auto">${esc(r.title)}</b><span dir="auto">${esc(r.desc)}</span></div></a>`;
 }
 function evTile(e) {
