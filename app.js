@@ -411,7 +411,7 @@ document.addEventListener("click", (e) => {
   else if (el.dataset.filterSet) S.filter = el.dataset.filterSet;
   else if (el.dataset.go) { S.supOk = false; S.supErr = ""; S.tab = el.dataset.go; S.filter = el.dataset.filter || "all"; S.q = ""; }
   else if (el.dataset.act === "lang") { S.lang = S.lang === "ar" ? "en" : "ar"; store.set("lang", S.lang); }
-  else if (el.dataset.act === "refresh") { loadAll(); loadResults(); return; }
+  else if (el.dataset.act === "refresh") { loadAll(); loadResults(); loadSupport(); return; }
   render();
   if (el.dataset.go === "quizzes") loadResults();
   if (el.dataset.go === "support") loadSupport();
@@ -426,5 +426,7 @@ document.addEventListener("visibilitychange", () => { if (!document.hidden) { lo
 render();
 loadAll();
 if (S.user) { loadResults(); loadSupport(); }
+// check for team replies every minute while the app is open
+setInterval(() => { if (!document.hidden && S.user && CFG.API_URL) loadSupport(); }, 60000);
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 })();
