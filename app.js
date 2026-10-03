@@ -20,6 +20,7 @@ const T = {
     support: "الدعم", supportSub: "اسألنا وهنرد عليك هنا", askTitle: "اسأل الفريق", askPh: "اكتب سؤالك…", send: "إرسال", sending: "جاري الإرسال…", sentOk: "اتبعت. هنرد عليك هنا.", myQuestions: "أسئلتك", teamReply: "رد الفريق", waiting: "في انتظار الرد", noQuestions: "مفيش أسئلة لسه.", signInToAsk: "سجّل دخول عشان تتواصل مع الفريق", supportErr: "مقدرناش نحمّل أسئلتك.", err_empty: "اكتب سؤالك الأول.", err_too_long: "الرسالة طويلة (الحد 500 حرف).", err_too_fast: "بعتّ رسائل كتير. جرّب بعد شوية.", offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", download: "تحميل", downloading: "جاري التحميل…", dlNote: "بدأ التحميل. الملفات الكبيرة ممكن ياخدوا كام دقيقة حسب سرعة النت. تابع التحميل من إشعارات الموبايل (الشريط اللي فوق)، وهتلاقي الملف في فولدر Downloads.", openExt: "فتح في المتصفح", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
+const VERSION = "2026.10.03-c";
 const S = {
   club: store.get("club", "chemistry") === "physics" ? "physics" : "chemistry",
   tab: "home", filter: "all", q: "", open: {},
@@ -202,7 +203,7 @@ function supportScreen() {
   <h2>${t("myQuestions")}</h2>${list}`;
 }
 function accountScreen() {
-  if (S.user) return `<div class="hero"><small>${t("hello")}</small><b dir="auto">${esc(S.user.name)}</b><span dir="ltr">@${esc(S.user.username)}</span></div><p class="note">${t("accountNote")}</p><button class="btn ghost" data-act="signout">${t("signOut")}</button>`;
+  if (S.user) return `<div class="hero"><small>${t("hello")}</small><b dir="auto">${esc(S.user.name)}</b><span dir="ltr">@${esc(S.user.username)}</span></div><p class="note">${t("accountNote")}</p><button class="btn ghost" data-act="signout">${t("signOut")}</button><p class="note" dir="ltr" style="opacity:.6">v${VERSION}</p>`;
   const reg = S.acct.mode === "register";
   return `<div class="seg" role="group"><button data-acct-mode="login" class="${reg ? "" : "on"}">${t("signIn")}</button><button data-acct-mode="register" class="${reg ? "on" : ""}">${t("createAccount")}</button></div>
   <form id="acct-form" class="form">
@@ -211,7 +212,7 @@ function accountScreen() {
     <label for="f-pass">${t("password")}</label><input id="f-pass" name="password" type="password" autocomplete="${reg ? "new-password" : "current-password"}" minlength="6" required>
     ${S.acct.err ? `<div class="warn" role="alert">${esc(S.acct.err)}</div>` : ""}
     <button class="btn" type="submit">${reg ? t("createAccount") : t("signIn")}</button>
-  </form><p class="note">${t("accountNote")}</p>`;
+  </form><p class="note">${t("accountNote")}</p><p class="note" dir="ltr" style="opacity:.6">v${VERSION}</p>`;
 }
 
 // Opens Google Drive / Docs / YouTube links inside the app instead of leaving it
@@ -411,7 +412,15 @@ document.addEventListener("click", (e) => {
   else if (el.dataset.filterSet) S.filter = el.dataset.filterSet;
   else if (el.dataset.go) { S.supOk = false; S.supErr = ""; S.tab = el.dataset.go; S.filter = el.dataset.filter || "all"; S.q = ""; }
   else if (el.dataset.act === "lang") { S.lang = S.lang === "ar" ? "en" : "ar"; store.set("lang", S.lang); }
-  else if (el.dataset.act === "refresh") { loadAll(); loadResults(); loadSupport(); return; }
+  else if (el.dataset.act === "refresh") {
+    el.textContent = "…"; el.disabled = true;
+    Promise.allSettled([loadAll(), loadResults(), loadSupport()]).then(() => {
+      render(true);
+      const b = document.querySelector('[data-act="refresh"]');
+      if (b) { b.textContent = "✓"; setTimeout(() => { const c = document.querySelector('[data-act="refresh"]'); if (c) c.textContent = "↻"; }, 1200); }
+    });
+    return;
+  }
   render();
   if (el.dataset.go === "quizzes") loadResults();
   if (el.dataset.go === "support") loadSupport();
