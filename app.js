@@ -11,13 +11,13 @@ const T = {
     filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Chemistry + Physics",
     recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where chemistry meets physics",
     jointBlurb: "Topics, events and materials that both clubs use.", shared: "SHARED BY BOTH CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
-    offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Profile", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", download: "Download", downloading: "Downloading…", dlNote: "Download started. Big files can take a few minutes depending on your internet. Follow the progress in your phone's notifications and find the file in Downloads.", openExt: "Open in browser", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
+    support: "Support", supportSub: "Ask us anything, we reply here", askTitle: "Ask the team", askPh: "Write your question…", send: "Send", sending: "Sending…", sentOk: "Sent. We will reply here.", myQuestions: "Your questions", teamReply: "Team reply", waiting: "Waiting for a reply", noQuestions: "No questions yet.", signInToAsk: "Sign in to contact the team", supportErr: "Could not load your questions.", err_empty: "Write your question first.", err_too_long: "Message is too long (max 500 characters).", err_too_fast: "You sent many messages. Try again in a little while.", offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Profile", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", download: "Download", downloading: "Downloading…", dlNote: "Download started. Big files can take a few minutes depending on your internet. Follow the progress in your phone's notifications and find the file in Downloads.", openExt: "Open in browser", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
   ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
     chemistry: "الكيمياء", physics: "الفيزياء", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
     filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "الكيمياء + الفيزياء",
     recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي الكيمياء بالفيزياء",
     jointBlurb: "موضوعات ومواعيد ومواد يستخدمها النادِيان.", shared: "مشترك بين النادييْن", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
-    offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", download: "تحميل", downloading: "جاري التحميل…", dlNote: "بدأ التحميل. الملفات الكبيرة ممكن ياخدوا كام دقيقة حسب سرعة النت. تابع التحميل من إشعارات الموبايل (الشريط اللي فوق)، وهتلاقي الملف في فولدر Downloads.", openExt: "فتح في المتصفح", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
+    support: "الدعم", supportSub: "اسألنا وهنرد عليك هنا", askTitle: "اسأل الفريق", askPh: "اكتب سؤالك…", send: "إرسال", sending: "جاري الإرسال…", sentOk: "اتبعت. هنرد عليك هنا.", myQuestions: "أسئلتك", teamReply: "رد الفريق", waiting: "في انتظار الرد", noQuestions: "مفيش أسئلة لسه.", signInToAsk: "سجّل دخول عشان تتواصل مع الفريق", supportErr: "مقدرناش نحمّل أسئلتك.", err_empty: "اكتب سؤالك الأول.", err_too_long: "الرسالة طويلة (الحد 500 حرف).", err_too_fast: "بعتّ رسائل كتير. جرّب بعد شوية.", offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", download: "تحميل", downloading: "جاري التحميل…", dlNote: "بدأ التحميل. الملفات الكبيرة ممكن ياخدوا كام دقيقة حسب سرعة النت. تابع التحميل من إشعارات الموبايل (الشريط اللي فوق)، وهتلاقي الملف في فولدر Downloads.", openExt: "فتح في المتصفح", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
 const S = {
@@ -26,7 +26,7 @@ const S = {
   lang: store.get("lang", (navigator.language || "en").startsWith("ar") ? "ar" : "en"),
   resources: [], events: [], live: true,
   user: (() => { try { return JSON.parse(store.get("acct", "")) || null; } catch { return null; } })(),
-  results: { state: "idle", list: [] }, acct: { mode: "login", err: "" }, form: {},
+  results: { state: "idle", list: [] }, support: { state: "idle", list: [] }, draft: "", supErr: "", supOk: false, sending: false, acct: { mode: "login", err: "" }, form: {},
 };
 const t = (k) => T[S.lang][k];
 
@@ -40,6 +40,7 @@ const P = {
   revision: '<path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/>',
   exam: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/>',
   quiz: '<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 015 .5c0 1.5-2.5 2-2.5 3.5M12 17v.5"/>',
+  support: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 13.5h4"/>',
   user: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',
   reference: '<path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/>',
 };
@@ -110,7 +111,7 @@ async function api(action, data) {
   return r.json();
 }
 function setUser(u) { S.user = u; store.set("acct", u ? JSON.stringify(u) : ""); }
-function signOut() { setUser(null); S.results = { state: "idle", list: [] }; S.acct = { mode: "login", err: "" }; S.form = {}; S.tab = "account"; render(); }
+function signOut() { setUser(null); S.results = { state: "idle", list: [] }; S.support = { state: "idle", list: [] }; S.draft = ""; S.acct = { mode: "login", err: "" }; S.form = {}; S.tab = "account"; render(); }
 async function loadResults() {
   if (!CFG.API_URL || !S.user) return;
   S.results = { state: "loading", list: S.results.list }; render(true);
@@ -150,6 +151,55 @@ function resultsBlock() {
     : R.state === "error" ? `<div class="warn">${t("resultsErr")}</div>`
     : !R.list.length ? `<p class="note">${t("noResults")}</p>` : R.list.map(resultTile).join("");
   return `<h2>${t("myResults")}</h2>${body}<h2>${t("quizzes")}</h2>`;
+}
+async function loadSupport() {
+  if (!CFG.API_URL || !S.user) return;
+  S.support = { state: "loading", list: S.support.list };
+  if (S.tab === "support") render(true);
+  try {
+    const r = await api("inbox", { token: S.user.token });
+    if (r.ok) S.support = { state: "ok", list: r.messages || [] };
+    else if (r.error === "auth") { signOut(); return; }
+    else S.support = { state: "error", list: [] };
+  } catch { S.support = { state: "error", list: [] }; }
+  render(true);
+}
+const answeredCount = () => S.support.list.filter((m) => m.reply).length;
+async function submitSupport(form) {
+  const msg = String(new FormData(form).get("message") || "").trim();
+  S.draft = msg; S.supOk = false;
+  if (!msg) { S.supErr = t("err_empty"); render(true); return; }
+  if (msg.length > 500) { S.supErr = t("err_too_long"); render(true); return; }
+  S.sending = true; S.supErr = ""; render(true);
+  try {
+    const r = await api("ask", { token: S.user.token, message: msg });
+    if (r.ok) { S.draft = ""; const fm = document.getElementById("f-msg"); if (fm) fm.value = ""; S.supOk = true; S.sending = false; await loadSupport(); return; }
+    if (r.error === "auth") { signOut(); return; }
+    S.supErr = T[S.lang]["err_" + r.error] || t("err_generic");
+  } catch { S.supErr = t("err_generic"); }
+  S.sending = false; render(true);
+}
+function supportTile(m) {
+  const d = new Date(m.when);
+  const when = m.when && !isNaN(d) ? new Intl.DateTimeFormat(locale(), { day: "numeric", month: "short" }).format(d) : "";
+  return `<div class="lo" style="padding:14px;display:flex;flex-direction:column;gap:8px">
+    <div dir="auto" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px">${esc(m.message)}</div>
+    <span style="font-size:12px;color:var(--muted)">${esc(when)}</span>
+    ${m.reply ? `<div style="background:var(--tint);border-radius:10px;padding:10px 12px"><b style="font-size:12px;color:var(--accent)">${t("teamReply")}</b><div dir="auto" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;margin-top:4px">${esc(m.reply)}</div></div>`
+      : `<span class="badge" style="align-self:flex-start">${t("waiting")}</span>`}</div>`;
+}
+function supportScreen() {
+  if (!CFG.API_URL) return "";
+  if (!S.user) return `<button class="card" data-go="account"><div class="ico">${icon("user")}</div><div class="grow"><b>${t("signInToAsk")}</b></div></button>`;
+  const R = S.support;
+  const list = R.state === "loading" && !R.list.length ? `<p class="note">${t("loadingRes")}</p>`
+    : R.state === "error" ? `<div class="warn">${t("supportErr")}</div>`
+    : !R.list.length ? `<p class="note">${t("noQuestions")}</p>` : R.list.map(supportTile).join("");
+  return `<form id="sup-form" class="form"><label for="f-msg">${t("askTitle")}</label>
+    <textarea id="f-msg" name="message" rows="4" maxlength="500" placeholder="${esc(t("askPh"))}" dir="auto" style="border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;background:#fff;resize:vertical">${esc(S.draft)}</textarea>
+    ${S.supErr ? `<div class="warn" role="alert">${esc(S.supErr)}</div>` : ""}${S.supOk && !S.supErr ? `<p class="note" role="status">${t("sentOk")}</p>` : ""}
+    <button class="btn" type="submit"${S.sending ? " disabled" : ""}>${S.sending ? t("sending") : t("send")}</button></form>
+  <h2>${t("myQuestions")}</h2>${list}`;
 }
 function accountScreen() {
   if (S.user) return `<div class="hero"><small>${t("hello")}</small><b dir="auto">${esc(S.user.name)}</b><span dir="ltr">@${esc(S.user.username)}</span></div><p class="note">${t("accountNote")}</p><button class="btn ghost" data-act="signout">${t("signOut")}</button>`;
@@ -327,22 +377,25 @@ function render(keep) {
   const root = document.documentElement;
   root.dataset.club = S.club; root.lang = S.lang; root.dir = S.lang === "ar" ? "rtl" : "ltr";
   document.querySelector('meta[name="theme-color"]').content = clubColor(S.club);
-  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, references: referencesScreen, joint: jointScreen, account: accountScreen };
-  const titles = { home: t("app"), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), account: t("account") };
-  const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, account: t("accountSub") };
-  const showSwitch = S.tab !== "joint" && S.tab !== "account";
-  const logo = S.tab === "joint" || S.tab === "account" ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
+  const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, references: referencesScreen, joint: jointScreen, support: supportScreen, account: accountScreen };
+  const titles = { home: t("app"), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), support: t("support"), account: t("account") };
+  const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, support: t("supportSub"), account: t("accountSub") };
+  const showSwitch = !["joint", "account", "support"].includes(S.tab);
+  const logo = ["joint", "account", "support"].includes(S.tab) ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
   const back = CHILD.includes(S.tab) ? `<button class="icon-btn" data-go="home" aria-label="${t("back")}">${S.lang === "ar" ? "→" : "←"}</button>` : "";
   const app = document.getElementById("app");
   const fu = document.getElementById("f-user"), fn = document.getElementById("f-name");
   if (fu) S.form.username = fu.value;
   if (fn) S.form.name = fn.value;
+  if (S.tab === "support" && S.support.state === "ok") store.set("supSeen", String(answeredCount()));
+  const fm = document.getElementById("f-msg");
+  if (fm) S.draft = fm.value;
   const keepFocusQ = document.activeElement?.id === "q";
   app.innerHTML = `<header><div class="top">${back}${logo}<div class="t"><div class="title">${titles[S.tab]}</div><div class="sub">${subs[S.tab]}</div></div>
     <button class="icon-btn" data-act="refresh" aria-label="${t("refresh")}">↻</button><button class="icon-btn" data-act="lang">${t("lang")}</button></div>
     ${showSwitch ? `<div class="switch" role="group">${["chemistry", "physics"].map((c) => `<button data-club="${c}" class="${S.club === c ? "on" : ""}" aria-pressed="${S.club === c}">${t(c)}</button>`).join("")}</div>` : ""}</header>
   <main>${S.live ? "" : `<div class="warn">${t("offline")}</div>`}${screens[S.tab]()}</main>
-  <nav>${[["home", "home"], ["library", "book"], ["events", "cal"], ...(CFG.API_URL ? [["account", "user"]] : [])].map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k || (k === "home" && CHILD.includes(S.tab)) ? "on" : ""}"${S.tab === k ? ' aria-current="page"' : ""}>${icon(ic)}<span>${t(k)}</span></button>`).join("")}</nav>`;
+  <nav>${[["home", "home"], ["library", "book"], ["events", "cal"], ...(CFG.API_URL ? [["support", "support"], ["account", "user"]] : [])].map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k || (k === "home" && CHILD.includes(S.tab)) ? "on" : ""}"${S.tab === k ? ' aria-current="page"' : ""}${k === "support" ? ' style="position:relative"' : ""}>${icon(ic)}<span>${t(k)}</span>${k === "support" && S.user && answeredCount() > Number(store.get("supSeen", "0")) && S.tab !== "support" ? `<i aria-label="new" style="position:absolute;top:10px;inset-inline-start:calc(50% + 6px);width:10px;height:10px;border-radius:50%;background:#E5484D;border:2px solid #fff"></i>` : ""}</button>`).join("")}</nav>`;
   if (prev) document.querySelector("main").scrollTop = prev;
   if (keepFocusQ) { const q = document.getElementById("q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
 }
@@ -356,18 +409,22 @@ document.addEventListener("click", (e) => {
   if (el.dataset.act === "signout") { signOut(); return; }
   if (el.dataset.club) { S.club = el.dataset.club; store.set("club", S.club); }
   else if (el.dataset.filterSet) S.filter = el.dataset.filterSet;
-  else if (el.dataset.go) { S.tab = el.dataset.go; S.filter = el.dataset.filter || "all"; S.q = ""; }
+  else if (el.dataset.go) { S.supOk = false; S.supErr = ""; S.tab = el.dataset.go; S.filter = el.dataset.filter || "all"; S.q = ""; }
   else if (el.dataset.act === "lang") { S.lang = S.lang === "ar" ? "en" : "ar"; store.set("lang", S.lang); }
   else if (el.dataset.act === "refresh") { loadAll(); loadResults(); return; }
   render();
   if (el.dataset.go === "quizzes") loadResults();
+  if (el.dataset.go === "support") loadSupport();
 });
 document.addEventListener("input", (e) => { if (e.target.id === "q") { S.q = e.target.value; render(true); } });
-document.addEventListener("submit", (e) => { if (e.target.id === "acct-form") { e.preventDefault(); submitAccount(e.target); } });
-document.addEventListener("visibilitychange", () => { if (!document.hidden) { loadAll(); if (S.tab === "quizzes") loadResults(); } });
+document.addEventListener("submit", (e) => {
+  if (e.target.id === "acct-form") { e.preventDefault(); submitAccount(e.target); }
+  if (e.target.id === "sup-form") { e.preventDefault(); submitSupport(e.target); }
+});
+document.addEventListener("visibilitychange", () => { if (!document.hidden) { loadAll(); if (S.tab === "quizzes") loadResults(); if (S.user) loadSupport(); } });
 
 render();
 loadAll();
-if (S.user) loadResults();
+if (S.user) { loadResults(); loadSupport(); }
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 })();
