@@ -17,8 +17,8 @@ window.APP_CONFIG = {
     { id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC", logo: "icons/chemistry_logo.png" },
     { id: "physics",   color: "#1F5FD1", tint: "#E8F0FD", logo: "icons/physics_logo.png" },
     { id: "deutsch",   color: "#B45309", tint: "#FDF1E3", glyph: "DE" },
-    { id: "mechanics", color: "#0F766E", tint: "#E3F5F3", glyph: "⚙" },
-    { id: "capstone",  color: "#BE185D", tint: "#FCE9F1", glyph: "CP" },
-    { id: "math",      color: "#15803D", tint: "#E6F5EB", glyph: "∑" },
+    { id: "mechanics", color: "#0F766E", tint: "#E3F5F3", logo: "icons/mechanics_logo.png" },
+    { id: "capstone",  color: "#BE185D", tint: "#FCE9F1", logo: "icons/capstone_logo.png" },
+    { id: "math",      color: "#15803D", tint: "#E6F5EB", logo: "icons/math_logo.png" },
   ],
 };
