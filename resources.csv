@@ -14,3 +14,14 @@ physics,reference,HyperPhysics,Reference link,http://hyperphysics.phy-astr.gsu.e
 joint,file,Thermodynamics: shared notes,PDF,https://example.com/thermo.pdf,2026-09-28
 joint,video,Spectroscopy in 10 minutes,Video 10 min,https://www.youtube.com/,2026-09-24
 joint,reference,Electrochemistry and circuits,Reference link,https://example.com/electro,2026-09-15
+deutsch,file,Grundwortschatz list,PDF,https://example.com/deutsch1.pdf,2026-09-26
+deutsch,video,German pronunciation basics,Video 9 min,https://www.youtube.com/,2026-09-24
+mechanics,file,Statics formulas,PDF,https://example.com/statics.pdf,2026-09-25
+mechanics,video,How gears work,Video 7 min,https://www.youtube.com/,2026-09-23
+capstone,file,Project proposal template,PDF,https://example.com/capstone.pdf,2026-09-27
+capstone,reference,Writing a project report,Reference link,https://example.com/report,2026-09-10
+math,file,Algebra practice set,PDF,https://example.com/algebra.pdf,2026-09-28
+math,video,Intro to functions,Video 11 min,https://www.youtube.com/,2026-09-22
+mechanics+capstone,file,Prototype checklist,PDF,https://example.com/proto.pdf,2026-09-29
+deutsch+math,reference,Math vocabulary in German,Reference link,https://example.com/mathde,2026-09-12
+all,file,Club rules and calendar,PDF,https://example.com/rules.pdf,2026-09-01

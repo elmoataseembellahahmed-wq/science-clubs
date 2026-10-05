@@ -14,8 +14,9 @@ header{background:#fff;border-bottom:1px solid var(--line);padding:calc(14px + e
 .title{font-family:'Sora','Cairo',sans-serif;font-size:22px;font-weight:700;line-height:1.2}
 .sub{font-size:13px;color:var(--muted)}
 .icon-btn{min-width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:12px;color:var(--ink);font-weight:600;font-size:14px}
-.switch{display:flex;gap:6px;padding:4px;background:#F1F0F6;border-radius:999px}
-.switch button{flex:1;height:44px;border:0;border-radius:999px;background:transparent;color:#4A4760;font-weight:600;font-size:14px}
+.switch{display:flex;gap:6px;padding:4px;background:#F1F0F6;border-radius:999px;overflow-x:auto;scrollbar-width:none}
+.switch::-webkit-scrollbar{display:none}
+.switch button{flex:1 0 auto;padding:0 16px;white-space:nowrap;height:44px;border:0;border-radius:999px;background:transparent;color:#4A4760;font-weight:600;font-size:14px}
 .switch button.on{color:#fff}
 .switch button[data-club="chemistry"].on{background:#6D3FC7}
 .switch button[data-club="physics"].on{background:#1F5FD1}
@@ -72,3 +73,5 @@ main>*{flex-shrink:0}
 .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
 .pct{font-size:13px;font-family:'Sora',sans-serif}
 button.card{font:inherit;cursor:pointer}
+
+.top .glyph{width:48px;height:48px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:18px}

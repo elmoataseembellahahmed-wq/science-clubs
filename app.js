@@ -7,22 +7,24 @@ const store = {
 
 const T = {
   en: { app: "Science Clubs", tagline: "Your school clubs in one place", home: "Home", library: "Library", events: "Events", joint: "Joint",
-    chemistry: "Chemistry", physics: "Physics", next: "Next meeting", noNext: "No upcoming meetings yet", files: "Files", videos: "Videos", refs: "References",
-    filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Chemistry + Physics",
-    recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where chemistry meets physics",
-    jointBlurb: "Topics, events and materials that both clubs use.", shared: "SHARED BY BOTH CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
+    chemistry: "Chemistry", physics: "Physics", deutsch: "Deutsch", mechanics: "Mechanics", capstone: "Capstone", math: "Math", next: "Next meeting", noNext: "No upcoming meetings yet", files: "Files", videos: "Videos", refs: "References",
+    filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Shared with other clubs",
+    recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where our clubs meet",
+    jointBlurb: "Topics, events and materials your club shares with other clubs.", shared: "SHARED WITH OTHER CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
     refreshing: "Refreshing…", updated: "Updated ✓", support: "Support", supportSub: "Ask us anything, we reply here", askTitle: "Ask the team", askPh: "Write your question…", send: "Send", sending: "Sending…", sentOk: "Sent. We will reply here.", myQuestions: "Your questions", teamReply: "Team reply", waiting: "Waiting for a reply", noQuestions: "No questions yet.", signInToAsk: "Sign in to contact the team", supportErr: "Could not load your questions.", err_empty: "Write your question first.", err_too_long: "Message is too long (max 500 characters).", err_too_fast: "You sent many messages. Try again in a little while.", offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Profile", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", download: "Download", downloading: "Downloading…", dlNote: "Download started. Big files can take a few minutes depending on your internet. Follow the progress in your phone's notifications and find the file in Downloads.", openExt: "Open in browser", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
   ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
-    chemistry: "الكيمياء", physics: "الفيزياء", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
-    filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "الكيمياء + الفيزياء",
-    recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي الكيمياء بالفيزياء",
-    jointBlurb: "موضوعات ومواعيد ومواد يستخدمها النادِيان.", shared: "مشترك بين النادييْن", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
+    chemistry: "الكيمياء", physics: "الفيزياء", deutsch: "الألماني", mechanics: "الميكانيكا", capstone: "الكابستون", math: "الرياضيات", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
+    filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "مشترك مع نوادي تانية",
+    recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي نوادينا",
+    jointBlurb: "موضوعات ومواعيد ومواد ناديك بيشاركها مع نوادي تانية.", shared: "مشترك مع نوادي تانية", sharedMaterials: "مواد مشتركة", jointEvents: "فعاليات مشتركة",
     refreshing: "جاري التحديث…", updated: "تم التحديث ✓", support: "الدعم", supportSub: "اسألنا وهنرد عليك هنا", askTitle: "اسأل الفريق", askPh: "اكتب سؤالك…", send: "إرسال", sending: "جاري الإرسال…", sentOk: "اتبعت. هنرد عليك هنا.", myQuestions: "أسئلتك", teamReply: "رد الفريق", waiting: "في انتظار الرد", noQuestions: "مفيش أسئلة لسه.", signInToAsk: "سجّل دخول عشان تتواصل مع الفريق", supportErr: "مقدرناش نحمّل أسئلتك.", err_empty: "اكتب سؤالك الأول.", err_too_long: "الرسالة طويلة (الحد 500 حرف).", err_too_fast: "بعتّ رسائل كتير. جرّب بعد شوية.", offline: "مفيش إنترنت. بنعرض آخر محتوى محفوظ.", refresh: "تحديث", lang: "EN", jointBadge: "مشترك", account: "حسابي", signIn: "تسجيل الدخول", createAccount: "إنشاء حساب", username: "اسم المستخدم", fullName: "الاسم بالكامل", password: "كلمة المرور", signOut: "تسجيل الخروج", myResults: "نتائجي", noResults: "مفيش نتائج لسه. نتيجتك بتظهر هنا بعد دقايق من ما تخلص الكويز.", signInToSee: "سجّل دخول عشان تشوف نتائج الكويزات", signInFirst: "سجّل دخول الأول عشان تحل الكويز", accountNote: "نتائجك ماحدش يشوفها غيرك. اكتب نفس اسم المستخدم لما الكويز يطلبه.", hello: "داخل باسم", loadingRes: "بنحمّل نتائجك...", resultsErr: "مقدرناش نحمّل النتائج. جرّب بعد شوية.", err_invalid_username: "اسم المستخدم من 3 لـ 20 حرف إنجليزي أو رقم أو . - _", err_invalid_password: "كلمة المرور لازم تكون 6 حروف على الأقل.", err_invalid_name: "اكتب اسمك.", err_taken: "اسم المستخدم ده مستخدم قبل كده.", err_bad_credentials: "اسم المستخدم أو كلمة المرور غلط.", err_locked: "محاولات كتير. جرّب بعد 10 دقايق.", err_generic: "حصلت مشكلة. اتأكد من الإنترنت وجرّب تاني.", pleaseWait: "استنى شوية...", accountSub: "نتائج الكويزات الخاصة بيك", quizTakeHint: "سجّل الدخول الأول", general: "عام", items: "عنصر", los: "LOs", losSub: "ملفات وفيديوهات وأكتر، لكل LO", refsTitle: "المراجع", refsPageSub: "لينكات وقراءة إضافية", back: "رجوع", download: "تحميل", downloading: "جاري التحميل…", dlNote: "بدأ التحميل. الملفات الكبيرة ممكن ياخدوا كام دقيقة حسب سرعة النت. تابع التحميل من إشعارات الموبايل (الشريط اللي فوق)، وهتلاقي الملف في فولدر Downloads.", openExt: "فتح في المتصفح", revision: "المراجعة", revisionTitle: "المراجعة والامتحانات", revisionMaterial: "ملفات المراجعة", exams: "الامتحانات", revisionSub: "ملخصات وملفات مراجعة وامتحانات", revisionAll: "ملفات المراجعة والامتحانات الخاصة بناديك والمشتركة", quizzes: "الكويزات", quizzesSub: "اختبر نفسك", quizTitle: "الكويزات", quizAll: "كويزات ناديك والكويزات المشتركة" },
 };
 
-const VERSION = "2026.10.03-d";
+const VERSION = "2026.10.05-clubs2";
+const CLUB_LIST = CFG.CLUBS || [{ id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC" }, { id: "physics", color: "#1F5FD1", tint: "#E8F0FD" }];
+const clubInfo = (id) => CLUB_LIST.find((c) => c.id === id);
 const S = {
-  club: store.get("club", "chemistry") === "physics" ? "physics" : "chemistry",
+  club: clubInfo(store.get("club", "")) ? store.get("club", "") : CLUB_LIST[0].id,
   tab: "home", filter: "all", q: "", open: {},
   lang: store.get("lang", (navigator.language || "en").startsWith("ar") ? "ar" : "en"),
   resources: [], events: [], live: true,
@@ -80,7 +82,30 @@ function parseCsv(text) {
   const head = rows[0].map((h) => h.trim().toLowerCase());
   return rows.slice(1).filter((r) => r.some((x) => x.trim())).map((r) => Object.fromEntries(head.map((h, i) => [h, (r[i] ?? "").trim()])));
 }
-const CLUBS = { chemistry: "chemistry", "كيمياء": "chemistry", "الكيمياء": "chemistry", physics: "physics", "فيزياء": "physics", "الفيزياء": "physics", joint: "joint", "مشترك": "joint" };
+const CLUBS = { chemistry: "chemistry", "كيمياء": "chemistry", "الكيمياء": "chemistry", physics: "physics", "فيزياء": "physics", "الفيزياء": "physics",
+  deutsch: "deutsch", german: "deutsch", "ألماني": "deutsch", "الماني": "deutsch", "الألماني": "deutsch", "ألمانى": "deutsch", "دويتش": "deutsch",
+  mechanics: "mechanics", mechanic: "mechanics", "ميكانيكا": "mechanics", "الميكانيكا": "mechanics",
+  capstone: "capstone", "كابستون": "capstone", "الكابستون": "capstone",
+  math: "math", maths: "math", mathematics: "math", "رياضيات": "math", "الرياضيات": "math",
+  joint: "joint", "مشترك": "joint" };
+// عمود club ممكن يحتوي أكتر من نادي مفصولين بـ + أو , أو / (مثلاً chemistry+physics). "all" = كل النوادي.
+// "joint" القديمة = الكيمياء + الفيزياء بس (CFG.JOINT_CLUBS).
+const ALL_WORDS = ["all", "everyone", "الكل", "كل النوادي"];
+function parseClubs(str) {
+  const out = new Set();
+  for (const raw of String(str || "").split(/[+,&\/|;؛]/)) {
+    const p = raw.trim().toLowerCase();
+    if (!p) continue;
+    if (ALL_WORDS.includes(p)) return ["*"];
+    if (p === "joint" || p === "مشترك") (CFG.JOINT_CLUBS || ["chemistry", "physics"]).forEach((c) => out.add(c));
+    else if (CLUBS[p] && clubInfo(CLUBS[p])) out.add(CLUBS[p]);
+  }
+  return [...out];
+}
+const inClub = (x, c) => x.clubs.includes("*") || x.clubs.includes(c);      // relevant to this club (own or shared)
+const isShared = (x) => x.clubs.length > 1 || x.clubs[0] === "*";             // belongs to 2+ clubs
+const ownOnly = (x, c) => !isShared(x) && x.clubs[0] === c;                   // belongs to this club only
+const clubsLabel = (x) => (x.clubs[0] === "*" ? t("jointBadge") : x.clubs.map((c) => t(c)).join(" + "));
 const TYPES = { file: "file", "ملف": "file", video: "video", "فيديو": "video", reference: "reference", link: "reference", revision: "revision", "مراجعة": "revision", exam: "exam", "امتحان": "exam", quiz: "quiz", "كويز": "quiz", "اختبار": "quiz", "مرجع": "reference", "لينك": "reference" };
 function parseDate(s) { const m = /^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(s || ""); return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null; }
 
@@ -93,8 +118,8 @@ async function loadCsv(url, key) {
     return { text, live: true };
   } catch { return { text: store.get(key, ""), live: false }; }
 }
-const toRes = (rows, base, forceType) => rows.map((x, i) => ({ club: CLUBS[x.club?.toLowerCase()] || null, type: forceType ? forceType(x) : (TYPES[x.type?.toLowerCase()] || "reference"),
-  title: x.title, desc: x.description, url: x.url, lo: (x.lo || "").trim(), date: parseDate(x.date), i: base + i })).filter((x) => x.club && x.title);
+const toRes = (rows, base, forceType) => rows.map((x, i) => ({ clubs: parseClubs(x.club), type: forceType ? forceType(x) : (TYPES[x.type?.toLowerCase()] || "reference"),
+  title: x.title, desc: x.description, url: x.url, lo: (x.lo || "").trim(), date: parseDate(x.date), i: base + i })).filter((x) => x.clubs.length && x.title);
 async function loadAll() {
   // References and Revision can have their own published sheet (REFERENCES_CSV, REVISION_CSV in config.js).
   // Rows of those types in the main resources sheet still show up too.
@@ -106,8 +131,8 @@ async function loadAll() {
     ...toRes(parseCsv(rf.text), 10000, () => "reference"),
     ...toRes(parseCsv(rv.text), 20000, (x) => (TYPES[x.type?.toLowerCase()] === "exam" ? "exam" : "revision")),
   ];
-  S.events = parseCsv(e.text).map((x) => ({ club: CLUBS[x.club?.toLowerCase()] || null, title: x.title, date: parseDate(x.date), time: x.time, place: x.place, note: x.note }))
-    .filter((x) => x.club && x.title && x.date);
+  S.events = parseCsv(e.text).map((x) => ({ clubs: parseClubs(x.club), title: x.title, date: parseDate(x.date), time: x.time, place: x.place, note: x.note }))
+    .filter((x) => x.clubs.length && x.title && x.date);
   render();
 }
 
@@ -116,7 +141,7 @@ const today = () => { const d = new Date(); d.setHours(0, 0, 0, 0); return d; };
 const locale = () => (S.lang === "ar" ? "ar-EG" : "en-GB");
 const upcoming = (list) => list.filter((e) => e.date >= today()).sort((a, b) => a.date - b.date);
 const recentFirst = (list) => [...list].sort((a, b) => (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0) || b.i - a.i);
-const clubColor = (c) => (c === "chemistry" ? "#6D3FC7" : c === "physics" ? "#1F5FD1" : "#4B4FC9");
+const clubColor = (c) => clubInfo(c)?.color || "#4B4FC9";
 
 // ---- accounts and private quiz results (needs API_URL in config.js) ----
 const NEEDS_USER = /\{user\}|%7Buser%7D/i;
@@ -313,9 +338,9 @@ function resTile(r) {
 function evTile(e) {
   const mon = new Intl.DateTimeFormat(locale(), { month: "short" }).format(e.date);
   const where = [e.time, e.place].filter(Boolean).join(" · ");
-  return `<div class="card"><div class="date" style="background:${clubColor(e.club)}"><small>${esc(mon)}</small><b>${new Intl.NumberFormat(locale()).format(e.date.getDate())}</b></div>
+  return `<div class="card"><div class="date" style="background:${clubColor(e.clubs[0] === "*" ? "" : (e.clubs.includes(S.club) ? S.club : e.clubs[0]))}"><small>${esc(mon)}</small><b>${new Intl.NumberFormat(locale()).format(e.date.getDate())}</b></div>
   <div class="grow"><b dir="auto">${esc(e.title)}</b><span dir="auto">${esc(where)}${e.note ? " — " + esc(e.note) : ""}</span></div>
-  ${e.club === "joint" ? `<span class="badge">${t("jointBadge")}</span>` : ""}</div>`;
+  ${isShared(e) ? `<span class="badge">${esc(clubsLabel(e))}</span>` : ""}</div>`;
 }
 const empty = () => `<p class="note">${t("empty")}</p>`;
 
@@ -341,10 +366,10 @@ const OWN_PAGE = ["reference", "revision", "exam", "quiz"]; // these never appea
 
 // ---- screens ----
 function home() {
-  const evs = upcoming(S.events.filter((e) => e.club === S.club || e.club === "joint"));
+  const evs = upcoming(S.events.filter((e) => inClub(e, S.club)));
   const next = evs[0];
   const when = next ? new Intl.DateTimeFormat(locale(), { weekday: "long", day: "numeric", month: "long" }).format(next.date) + [next.time && " · " + next.time, next.place && " · " + next.place].filter(Boolean).join("") : "";
-  const recent = recentFirst(S.resources.filter((r) => r.club === S.club && !OWN_PAGE.includes(r.type))).slice(0, 3);
+  const recent = recentFirst(S.resources.filter((r) => ownOnly(r, S.club) && !OWN_PAGE.includes(r.type))).slice(0, 3);
   const tile = (ic, b, s, tab, f, wide) => `<button class="tile${wide ? " wide" : ""}" data-go="${tab}" data-filter="${f || "all"}">${icon(ic, 26)}<b>${t(b)}</b><span>${t(s)}</span></button>`;
   return `<div class="hero"><small>${t("next")}</small><b dir="auto">${next ? esc(next.title) : t("noNext")}</b><span dir="auto">${esc(when)}</span></div>
   <div class="grid">${tile("book", "los", "losSub", "library")}${tile("reference", "refs", "refsSub", "references")}${tile("revision", "revision", "revisionSub", "revision")}${tile("quiz", "quizzes", "quizzesSub", "quizzes")}${tile("joint", "jointSpace", "jointSub", "joint", "all", true)}</div>
@@ -352,25 +377,25 @@ function home() {
 }
 function library() {
   const q = S.q.trim().toLowerCase();
-  const items = recentFirst(S.resources.filter((r) => r.club === S.club && !OWN_PAGE.includes(r.type) && (!q || (r.title + " " + r.desc).toLowerCase().includes(q))));
+  const items = recentFirst(S.resources.filter((r) => ownOnly(r, S.club) && !OWN_PAGE.includes(r.type) && (!q || (r.title + " " + r.desc).toLowerCase().includes(q))));
   return `<input type="search" id="q" placeholder="${t("search")}" aria-label="${t("search")}" value="${esc(S.q)}">
   ${loSections(S.club, items, !!q) || empty()}`;
 }
 function eventsScreen() {
-  const list = upcoming(S.events.filter((e) => e.club === S.club || e.club === "joint"));
+  const list = upcoming(S.events.filter((e) => inClub(e, S.club)));
   return `<h2>${t("upcoming")}</h2>${list.map(evTile).join("") || empty()}`;
 }
 function referencesScreen() {
-  const list = recentFirst(S.resources.filter((r) => r.type === "reference" && (r.club === S.club || r.club === "joint")));
+  const list = recentFirst(S.resources.filter((r) => r.type === "reference" && inClub(r, S.club)));
   const body = list.some((r) => r.lo) ? loSections(S.club + "-ref", list, true) : list.map(resTile).join("");
   return `<div class="hero"><small>${t("refs")}</small><b>${t("refsTitle")}</b><span>${t("refsPageSub")}</span></div>${body || empty()}`;
 }
 function quizzesScreen() {
-  const list = recentFirst(S.resources.filter((r) => r.type === "quiz" && (r.club === S.club || r.club === "joint")));
+  const list = recentFirst(S.resources.filter((r) => r.type === "quiz" && inClub(r, S.club)));
   return `<div class="hero"><small>${t("quizzes")}</small><b>${t("quizTitle")}</b><span>${t("quizAll")}</span></div>${resultsBlock()}${list.map((r) => resTile({ ...r, desc: [r.lo, r.desc].filter(Boolean).join(" · ") })).join("") || empty()}`;
 }
 function revisionScreen() {
-  const list = S.resources.filter((r) => ["revision", "exam"].includes(r.type) && (r.club === S.club || r.club === "joint"));
+  const list = S.resources.filter((r) => ["revision", "exam"].includes(r.type) && inClub(r, S.club));
   const groups = [["revision", "revisionMaterial"], ["exam", "exams"]].map(([ty, label]) => {
     const items = recentFirst(list.filter((r) => r.type === ty));
     if (!items.length) return "";
@@ -380,9 +405,9 @@ function revisionScreen() {
   return `<div class="hero"><small>${t("revision")}</small><b>${t("revisionTitle")}</b><span>${t("revisionAll")}</span></div>${groups || empty()}`;
 }
 function jointScreen() {
-  const res = recentFirst(S.resources.filter((r) => r.club === "joint" && !OWN_PAGE.includes(r.type)));
-  const evs = upcoming(S.events.filter((e) => e.club === "joint"));
-  return `<div class="hero joint"><small>${t("shared")}</small><b>${t("jointTitle")}</b><span>${t("jointBlurb")}</span></div>
+  const res = recentFirst(S.resources.filter((r) => isShared(r) && inClub(r, S.club) && !OWN_PAGE.includes(r.type))).map((r) => ({ ...r, desc: [clubsLabel(r), r.desc].filter(Boolean).join(" · ") }));
+  const evs = upcoming(S.events.filter((e) => isShared(e) && inClub(e, S.club)));
+  return `<div class="hero joint"><small>${t("shared")} · ${t(S.club)}</small><b>${t("jointTitle")}</b><span>${t("jointBlurb")}</span></div>
   <h2>${t("sharedMaterials")}</h2>${loSections("joint", res, false) || empty()}<h2>${t("jointEvents")}</h2>${evs.map(evTile).join("") || empty()}`;
 }
 
@@ -390,13 +415,15 @@ function jointScreen() {
 function render(keep) {
   const prev = keep ? document.querySelector("main")?.scrollTop : 0;
   const root = document.documentElement;
+  const ci = clubInfo(S.club);
+  root.style.setProperty("--accent", ci.color); root.style.setProperty("--tint", ci.tint || "#F1EBFC");
   root.dataset.club = S.club; root.lang = S.lang; root.dir = S.lang === "ar" ? "rtl" : "ltr";
   document.querySelector('meta[name="theme-color"]').content = clubColor(S.club);
   const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, references: referencesScreen, joint: jointScreen, support: supportScreen, account: accountScreen };
   const titles = { home: t("app"), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), support: t("support"), account: t("account") };
-  const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: `${t("chemistry")} + ${t("physics")}`, support: t("supportSub"), account: t("accountSub") };
+  const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: t("jointSub"), support: t("supportSub"), account: t("accountSub") };
   const showSwitch = !["joint", "account", "support"].includes(S.tab);
-  const logo = ["joint", "account", "support"].includes(S.tab) ? "" : `<img src="${esc(CFG.LOGOS[S.club])}" alt="">`;
+  const logo = ["joint", "account", "support"].includes(S.tab) ? "" : (ci.logo || CFG.LOGOS?.[S.club]) ? `<img src="${esc(ci.logo || CFG.LOGOS[S.club])}" alt="">` : `<div class="glyph" aria-hidden="true" style="background:${ci.color}">${esc(ci.glyph || t(S.club).slice(0, 2))}</div>`;
   const back = CHILD.includes(S.tab) ? `<button class="icon-btn" data-go="home" aria-label="${t("back")}">${S.lang === "ar" ? "→" : "←"}</button>` : "";
   const app = document.getElementById("app");
   const fu = document.getElementById("f-user"), fn = document.getElementById("f-name");
@@ -408,10 +435,11 @@ function render(keep) {
   const keepFocusQ = document.activeElement?.id === "q";
   app.innerHTML = `<header><div class="top">${back}${logo}<div class="t"><div class="title">${titles[S.tab]}</div><div class="sub">${subs[S.tab]}</div></div>
     <button class="icon-btn" data-act="refresh" aria-label="${t("refresh")}">↻</button><button class="icon-btn" data-act="lang">${t("lang")}</button></div>
-    ${showSwitch ? `<div class="switch" role="group">${["chemistry", "physics"].map((c) => `<button data-club="${c}" class="${S.club === c ? "on" : ""}" aria-pressed="${S.club === c}">${t(c)}</button>`).join("")}</div>` : ""}</header>
+    ${showSwitch ? `<div class="switch" role="group">${CLUB_LIST.map((c) => `<button data-club="${c.id}" class="${S.club === c.id ? "on" : ""}" aria-pressed="${S.club === c.id}"${S.club === c.id ? ` style="background:${c.color}"` : ""}>${t(c.id)}</button>`).join("")}</div>` : ""}</header>
   <main>${S.live ? "" : `<div class="warn">${t("offline")}</div>`}${screens[S.tab]()}</main>
   <nav>${[["home", "home"], ["library", "book"], ["events", "cal"], ...(CFG.API_URL ? [["support", "support"], ["account", "user"]] : [])].map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k || (k === "home" && CHILD.includes(S.tab)) ? "on" : ""}"${S.tab === k ? ' aria-current="page"' : ""}${k === "support" ? ' style="position:relative"' : ""}>${icon(ic)}<span>${t(k)}</span>${k === "support" && S.user && answeredCount() > Number(store.get("supSeen", "0")) && S.tab !== "support" ? `<i aria-label="new" style="position:absolute;top:10px;inset-inline-start:calc(50% + 6px);width:10px;height:10px;border-radius:50%;background:#E5484D;border:2px solid #fff"></i>` : ""}</button>`).join("")}</nav>`;
   if (prev) document.querySelector("main").scrollTop = prev;
+  document.querySelector(".switch button.on")?.scrollIntoView({ inline: "center", block: "nearest" });
   if (keepFocusQ) { const q = document.getElementById("q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
 }
 

@@ -9,4 +9,16 @@ window.APP_CONFIG = {
   // خدمة الحسابات ونتائج الكويزات (Apps Script)
   API_URL: "https://script.google.com/macros/s/AKfycbyE7XaAzTWPdpU6Q1BXOmLr4h5WGAQgphRTSwB0g0qZzKAC6Sr5gZ18GQ--8i061YKjtw/exec",
   LOGOS: { chemistry: "icons/chemistry_logo.png", physics: "icons/physics_logo.png" },
+  // قائمة النوادي / Clubs list. لإضافة نادي جديد: أضف سطر هنا + اسمه في T جوه app.js + اكتب id في عمود club في الشيت.
+  // To add a club: add a line here, its name in T (app.js), and use the id in the sheet's "club" column.
+  // "joint" القديمة في الشيت = النوادي دي بس / legacy "joint" rows in the sheet mean only these clubs
+  JOINT_CLUBS: ["chemistry", "physics"],
+  CLUBS: [
+    { id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC", logo: "icons/chemistry_logo.png" },
+    { id: "physics",   color: "#1F5FD1", tint: "#E8F0FD", logo: "icons/physics_logo.png" },
+    { id: "deutsch",   color: "#B45309", tint: "#FDF1E3", glyph: "DE" },
+    { id: "mechanics", color: "#0F766E", tint: "#E3F5F3", glyph: "⚙" },
+    { id: "capstone",  color: "#BE185D", tint: "#FCE9F1", glyph: "CP" },
+    { id: "math",      color: "#15803D", tint: "#E6F5EB", glyph: "∑" },
+  ],
 };
