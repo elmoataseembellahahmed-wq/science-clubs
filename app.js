@@ -86,7 +86,7 @@ Object.assign(T.ar, {
   approvedOk: "تمت الموافقة ✓", rejectedOk: "تم الرفض", by: "من", noRequests: "مفيش طلبات.",
 });
 
-const VERSION = "2026.10.09-admin-only";
+const VERSION = "2026.10.10-auto-update";
 const CLUB_LIST = CFG.CLUBS || [{ id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC" }, { id: "physics", color: "#1F5FD1", tint: "#E8F0FD" }];
 const clubInfo = (id) => CLUB_LIST.find((c) => c.id === id);
 const S = {
@@ -1045,5 +1045,28 @@ loadAll();
 if (S.user) { loadResults(); loadSupport(); refreshMe().then(loadAdminInbox); }
 // check for team replies every minute while the app is open
 setInterval(() => { if (!document.hidden && S.user && CFG.API_URL) { loadSupport(); loadAdminInbox(); } }, 60000);
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+// ---- self-update: when a new version is published the app refreshes itself, nobody has to clear site data ----
+// version.json is uploaded next to app.js on every release. If it differs from VERSION, the app refetches its own files
+// (bypassing every cache), removes the old service worker and caches, and reloads once.
+async function checkUpdate() {
+  try {
+    if (!navigator.onLine) return;
+    const r = await fetch("version.json?t=" + Date.now(), { cache: "no-store" });
+    if (!r.ok) return;
+    const v = (await r.json()).version;
+    if (!v || v === VERSION) { sessionStorage.removeItem("updTry"); return; }
+    // never interrupt someone who is typing, taking a quiz or editing
+    if (S.adm?.form || S.adm?.qres || S.qz?.state === "ready" || document.activeElement?.closest?.("input,textarea,select")) return;
+    if (sessionStorage.getItem("updTry") === v) return; // tried once this session already, avoid reload loops
+    sessionStorage.setItem("updTry", v);
+    await Promise.all(["index.html", "style.css", "app.js", "config.js", "manifest.webmanifest", "sw.js"].map((u) => fetch(u, { cache: "reload" }).catch(() => {})));
+    const regs = (await navigator.serviceWorker?.getRegistrations?.()) || [];
+    await Promise.all(regs.map((g) => g.unregister()));
+    for (const k of await caches.keys()) await caches.delete(k);
+    location.reload();
+  } catch {}
+}
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then((g) => g.update()).catch(() => {});
+setTimeout(checkUpdate, 1500);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) checkUpdate(); });
 })();
