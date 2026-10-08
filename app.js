@@ -55,7 +55,7 @@ Object.assign(T.ar, {
 
 Object.assign(T.en, {
   pickClubs: "Choose your club(s)", myClubs: "My clubs", saveClubs: "Save my clubs", clubsSaved: "Clubs updated ✓",
-  gateLogin: "Sign in or create an account to see your club.", gateClubs: "Choose your club to continue.",
+  gateLogin: "Sign in or create an account to continue.", gateClubs: "Choose your club to continue.",
   err_pick_club: "Choose at least one club.", err_need_two: "A shared session needs at least two clubs, including yours.",
   questionsWord: "questions", attemptsLbl: "Attempts", attemptsUnl: "Unlimited", attemptsLeft: "Attempts left",
   qzSubmit: "Submit answers", qzAnswerAll: "Answer every question to submit.", qzScore: "Your score", qzRetake: "Try again", qzBack: "Back to quizzes",
@@ -71,7 +71,7 @@ Object.assign(T.en, {
 });
 Object.assign(T.ar, {
   pickClubs: "اختار ناديك (أو نواديك)", myClubs: "نواديّ", saveClubs: "احفظ نواديّ", clubsSaved: "تم تحديث النوادي ✓",
-  gateLogin: "سجّل دخولك أو اعمل حساب عشان تشوف ناديك.", gateClubs: "اختار ناديك عشان تكمل.",
+  gateLogin: "سجّل دخولك أو اعمل حساب عشان تكمل.", gateClubs: "اختار ناديك عشان تكمل.",
   err_pick_club: "اختار نادي واحد على الأقل.", err_need_two: "الجلسة المشتركة لازم تبقى بين نادييْن على الأقل، من ضمنهم ناديك.",
   questionsWord: "سؤال", attemptsLbl: "المحاولات", attemptsUnl: "مفتوحة", attemptsLeft: "محاولات متبقية",
   qzSubmit: "سلّم الإجابات", qzAnswerAll: "جاوب على كل الأسئلة عشان تسلّم.", qzScore: "درجتك", qzRetake: "حاول تاني", qzBack: "رجوع للكويزات",
@@ -86,27 +86,30 @@ Object.assign(T.ar, {
   approvedOk: "تمت الموافقة ✓", rejectedOk: "تم الرفض", by: "من", noRequests: "مفيش طلبات.",
 });
 
-const VERSION = "2026.10.07-clubs-quiz";
+const VERSION = "2026.10.08-roles";
 const CLUB_LIST = CFG.CLUBS || [{ id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC" }, { id: "physics", color: "#1F5FD1", tint: "#E8F0FD" }];
 const clubInfo = (id) => CLUB_LIST.find((c) => c.id === id);
 const S = {
   club: clubInfo(store.get("club", "")) ? store.get("club", "") : CLUB_LIST[0].id,
   tab: "home", filter: "all", q: "", open: {},
   lang: store.get("lang", (navigator.language || "en").startsWith("ar") ? "ar" : "en"),
-  resources: [], events: [], quizzes: [], qz: null, myc: undefined, live: true,
+  resources: [], events: [], quizzes: [], qz: null, live: true,
   user: (() => { try { return JSON.parse(store.get("acct", "")) || null; } catch { return null; } })(),
   results: { state: "idle", list: [] }, support: { state: "idle", list: [] }, draft: "", supErr: "", supOk: false, sending: false, acct: { mode: "login", err: "" }, form: {},
 };
-// Each person only sees their own clubs (chosen at sign-up) plus the clubs they administer. The main admin sees all.
+// Who sees what: the main admin sees every club, a club leader sees only their own club(s),
+// and everyone else (a normal student) gets the student view with all clubs.
+const roleClubs = () => (S.user?.role?.clubs || []).filter((c) => clubInfo(c));
 const visibleIds = () => {
-  if (!CFG.API_URL) return CLUB_LIST.map((c) => c.id);
+  const all = CLUB_LIST.map((c) => c.id);
+  if (!CFG.API_URL) return all;
   const u = S.user; if (!u) return [];
-  if (u.role?.super) return CLUB_LIST.map((c) => c.id);
-  const ids = [...(u.clubs || []), ...(u.role?.clubs || [])];
-  return CLUB_LIST.map((c) => c.id).filter((id) => ids.includes(id));
+  if (u.role?.super) return all;
+  const mine = roleClubs();
+  return mine.length ? mine : all;
 };
 const visClubs = () => CLUB_LIST.filter((c) => visibleIds().includes(c.id));
-const gate = () => (!CFG.API_URL ? "" : !S.user ? "login" : !visibleIds().length ? "clubs" : "");
+const gate = () => (CFG.API_URL && !S.user ? "login" : "");
 const seesItem = (x) => !CFG.API_URL || S.user?.role?.super || x.clubs.includes("*") || x.clubs.some((c) => visibleIds().includes(c));
 const newAdm = () => ({ sec: "content", form: null, req: false, uploading: "", reqs: [], qres: null, kind: "", editId: "", busy: false, err: "", inbox: { state: "idle", list: [] }, users: { state: "idle", list: [] }, drafts: {}, roleEdit: null });
 S.adm = newAdm();
@@ -252,7 +255,7 @@ async function api(action, data) {
   return r.json();
 }
 function setUser(u) { S.user = u; store.set("acct", u ? JSON.stringify(u) : ""); }
-function signOut() { setUser(null); S.results = { state: "idle", list: [] }; S.support = { state: "idle", list: [] }; S.draft = ""; S.acct = { mode: "login", err: "" }; S.form = {}; S.adm = newAdm(); S.qz = null; S.myc = undefined; S.tab = "account"; render(); loadAll(); }
+function signOut() { setUser(null); S.results = { state: "idle", list: [] }; S.support = { state: "idle", list: [] }; S.draft = ""; S.acct = { mode: "login", err: "" }; S.form = {}; S.adm = newAdm(); S.qz = null; S.tab = "account"; render(); loadAll(); }
 async function loadResults() {
   if (!CFG.API_URL || !S.user) return;
   S.results = { state: "loading", list: S.results.list }; render(true);
@@ -268,12 +271,11 @@ async function submitAccount(form) {
   const v = Object.fromEntries(new FormData(form));
   const reg = S.acct.mode === "register";
   S.form = { ...S.form, username: v.username, name: v.name };
-  if (reg && !(S.form.clubs || []).length) { S.acct.err = t("err_pick_club"); render(); return; }
   const btn = form.querySelector("button[type=submit]");
   btn.disabled = true; btn.textContent = t("pleaseWait");
   try {
-    const r = await api(reg ? "register" : "login", { username: v.username, name: v.name, password: v.password, clubs: reg ? S.form.clubs : undefined });
-    if (r.ok) { setUser({ username: r.username, name: r.name, token: r.token, role: r.role || null, clubs: r.clubs || [] }); S.acct.err = ""; S.form = {}; S.myc = undefined; S.tab = isAdmin() ? "admin" : "home"; render(); loadAll(); loadResults(); loadSupport(); refreshMe().then(loadAdminInbox); return; }
+    const r = await api(reg ? "register" : "login", { username: v.username, name: v.name, password: v.password });
+    if (r.ok) { setUser({ username: r.username, name: r.name, token: r.token, role: r.role || null }); S.acct.err = ""; S.form = {}; S.tab = isAdmin() ? "admin" : "home"; render(); loadAll(); loadResults(); loadSupport(); refreshMe().then(loadAdminInbox); return; }
     S.acct.err = T[S.lang]["err_" + r.error] || t("err_generic");
   } catch { S.acct.err = t("err_generic"); }
   render();
@@ -343,32 +345,14 @@ function supportScreen() {
     <button class="btn" type="submit"${S.sending ? " disabled" : ""}>${S.sending ? t("sending") : t("send")}</button></form>
   <h2>${t("myQuestions")}</h2>${list}`;
 }
-function myClubsBlock() {
-  if (isSuper()) return "";
-  const cur = S.myc ?? (S.user.clubs || []);
-  return `<h2>${t("myClubs")}</h2><div class="checks">${CLUB_LIST.map((c) => `<label class="chk"><input type="checkbox" data-myc="${esc(c.id)}"${cur.includes(c.id) ? " checked" : ""}>${esc(t(c.id))}</label>`).join("")}</div>
-  <button class="btn" data-my="save" style="margin-top:0">${t("saveClubs")}</button>`;
-}
-async function saveMyClubs() {
-  const clubs = S.myc ?? (S.user.clubs || []);
-  if (!clubs.length) { toast(t("err_pick_club"), 2500); return; }
-  try {
-    const r = await api("setClubs", { token: S.user.token, clubs });
-    if (r.ok) { setUser({ ...S.user, clubs: r.clubs }); S.myc = undefined; toast(t("clubsSaved"), 2000); if (gate() === "") S.tab = S.tab === "account" && !isAdmin() ? "home" : S.tab; await loadAll(); return; }
-    if (r.error === "auth") { signOut(); return; }
-    toast(T[S.lang]["err_" + r.error] || t("err_generic"), 3000);
-  } catch { toast(t("err_generic"), 3000); }
-}
 function accountScreen() {
-  if (S.user) return `${gate() === "clubs" ? `<div class="warn">${t("gateClubs")}</div>` : ""}<div class="hero"><small>${t("hello")}</small><b dir="auto">${esc(S.user.name)}</b><span dir="ltr">@${esc(S.user.username)}</span>${isAdmin() ? `<span style="display:block;margin-top:8px"><span class="badge">${t("adminBadge")} · ${esc(roleLabel(S.user.role))}</span></span>` : ""}</div>${myClubsBlock()}<p class="note">${t("accountNote")}</p><button class="btn ghost" data-act="signout">${t("signOut")}</button><p class="note" dir="ltr" style="opacity:.6">v${VERSION}</p>`;
+  if (S.user) return `<div class="hero"><small>${t("hello")}</small><b dir="auto">${esc(S.user.name)}</b><span dir="ltr">@${esc(S.user.username)}</span>${isAdmin() ? `<span style="display:block;margin-top:8px"><span class="badge">${t("adminBadge")} · ${esc(roleLabel(S.user.role))}</span></span>` : ""}</div><p class="note">${t("accountNote")}</p><button class="btn ghost" data-act="signout">${t("signOut")}</button><p class="note" dir="ltr" style="opacity:.6">v${VERSION}</p>`;
   const reg = S.acct.mode === "register";
-  const regClubs = reg ? `<label>${t("pickClubs")}</label><div class="checks">${CLUB_LIST.map((c) => `<label class="chk"><input type="checkbox" data-regc="${esc(c.id)}"${(S.form.clubs || []).includes(c.id) ? " checked" : ""}>${esc(t(c.id))}</label>`).join("")}</div>` : "";
   return `${gate() === "login" ? `<p class="note">${t("gateLogin")}</p>` : ""}<div class="seg" role="group"><button data-acct-mode="login" class="${reg ? "" : "on"}">${t("signIn")}</button><button data-acct-mode="register" class="${reg ? "on" : ""}">${t("createAccount")}</button></div>
   <form id="acct-form" class="form">
     <label for="f-user">${t("username")}</label><input id="f-user" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" dir="ltr" required value="${esc(S.form.username || "")}">
     ${reg ? `<label for="f-name">${t("fullName")}</label><input id="f-name" name="name" autocomplete="name" required value="${esc(S.form.name || "")}">` : ""}
     <label for="f-pass">${t("password")}</label><input id="f-pass" name="password" type="password" autocomplete="${reg ? "new-password" : "current-password"}" minlength="6" required>
-    ${regClubs}
     ${S.acct.err ? `<div class="warn" role="alert">${esc(S.acct.err)}</div>` : ""}
     <button class="btn" type="submit">${reg ? t("createAccount") : t("signIn")}</button>
   </form><p class="note">${t("accountNote")}</p><p class="note" dir="ltr" style="opacity:.6">v${VERSION}</p>`;
@@ -533,9 +517,9 @@ function jointScreen() {
 }
 
 // ---- admin (club admins manage their own club, the main admin manages everything) ----
-const isAdmin = () => !!(S.user && S.user.role && (S.user.role.super || (S.user.role.clubs || []).length));
+const isAdmin = () => !!(S.user && S.user.role && (S.user.role.super || roleClubs().length));
 const isSuper = () => !!(S.user && S.user.role && S.user.role.super);
-const myClubs = () => (isSuper() ? CLUB_LIST.map((c) => c.id) : (S.user?.role?.clubs || []).filter((c) => clubInfo(c)));
+const myClubs = () => (isSuper() ? CLUB_LIST.map((c) => c.id) : roleClubs());
 // A club admin manages an item only if EVERY club on it is theirs. Shared items are the main admin's (club admins send a request).
 const canManage = (x) => isAdmin() && (isSuper() || (x.clubs.length > 0 && !x.clubs.includes("*") && x.clubs.every((c) => (S.user.role.clubs || []).includes(c))));
 const clubName = (c) => (clubInfo(c) ? t(c) : c);
@@ -554,9 +538,9 @@ async function refreshMe() {
   try {
     const r = await api("me", { token: S.user.token });
     if (r.ok) {
-      const before = JSON.stringify([S.user.clubs, S.user.role]);
-      setUser({ ...S.user, name: r.name, role: r.role || null, clubs: r.clubs || [] });
-      if (before !== JSON.stringify([S.user.clubs, S.user.role])) await loadAll(); else render(true);
+      const before = JSON.stringify(S.user.role);
+      setUser({ ...S.user, name: r.name, role: r.role || null });
+      if (before !== JSON.stringify(S.user.role)) await loadAll(); else render(true);
     } else if (r.error === "auth") signOut();
   } catch {}
 }
@@ -930,11 +914,10 @@ function quizScreen() {
 
 // ---- events for admin and quiz screens ----
 document.addEventListener("click", (e) => {
-  const el = e.target.closest("[data-adm],[data-qz],[data-my],[data-qzs]");
+  const el = e.target.closest("[data-adm],[data-qz],[data-qzs]");
   if (!el || !document.getElementById("app").contains(el)) return;
   const A = S.adm, d = el.dataset;
   if (d.qz) { openQuiz(d.qz); return; }
-  if (d.my === "save") { saveMyClubs(); return; }
   if (el.hasAttribute("data-qzs")) { submitQuiz(); return; }
   const qi = +d.qi, oj = +d.oj;
   if (d.adm === "sec") { A.sec = d.v; S.q = ""; A.roleEdit = null; render(); if (d.v === "inbox" || d.v === "requests") loadAdminInbox(); if (d.v === "team") loadUsers(); }
@@ -977,9 +960,7 @@ document.addEventListener("change", (e) => {
   else if (el.hasAttribute?.("data-af-file")) admUpload(el.files && el.files[0]);
   else if (d.arc && A.roleEdit) {
     if (d.arc === "super") A.roleEdit.super = el.checked; else A.roleEdit.clubs = toggle(A.roleEdit.clubs, d.arc, el.checked);
-  } else if (d.regc !== undefined) S.form.clubs = toggle(S.form.clubs || [], d.regc, el.checked);
-  else if (d.myc !== undefined) S.myc = toggle(S.myc ?? (S.user?.clubs || []), d.myc, el.checked);
-  else if (d.qza !== undefined && S.qz) {
+  } else if (d.qza !== undefined && S.qz) {
     S.qz.answers[+d.qza] = +el.value;
     const ready = S.qz.answers.every((a) => a >= 0);
     const b = document.getElementById("qz-submit"); if (b) b.disabled = !ready;
