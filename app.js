@@ -273,7 +273,7 @@ async function submitAccount(form) {
   btn.disabled = true; btn.textContent = t("pleaseWait");
   try {
     const r = await api(reg ? "register" : "login", { username: v.username, name: v.name, password: v.password, clubs: reg ? S.form.clubs : undefined });
-    if (r.ok) { setUser({ username: r.username, name: r.name, token: r.token, role: r.role || null, clubs: r.clubs || [] }); S.acct.err = ""; S.form = {}; S.myc = undefined; S.tab = "home"; render(); loadAll(); loadResults(); loadSupport(); refreshMe().then(loadAdminInbox); return; }
+    if (r.ok) { setUser({ username: r.username, name: r.name, token: r.token, role: r.role || null, clubs: r.clubs || [] }); S.acct.err = ""; S.form = {}; S.myc = undefined; S.tab = isAdmin() ? "admin" : "home"; render(); loadAll(); loadResults(); loadSupport(); refreshMe().then(loadAdminInbox); return; }
     S.acct.err = T[S.lang]["err_" + r.error] || t("err_generic");
   } catch { S.acct.err = t("err_generic"); }
   render();
