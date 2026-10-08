@@ -86,7 +86,7 @@ Object.assign(T.ar, {
   approvedOk: "تمت الموافقة ✓", rejectedOk: "تم الرفض", by: "من", noRequests: "مفيش طلبات.",
 });
 
-const VERSION = "2026.10.08-roles";
+const VERSION = "2026.10.09-admin-only";
 const CLUB_LIST = CFG.CLUBS || [{ id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC" }, { id: "physics", color: "#1F5FD1", tint: "#E8F0FD" }];
 const clubInfo = (id) => CLUB_LIST.find((c) => c.id === id);
 const S = {
@@ -971,7 +971,7 @@ document.addEventListener("submit", (e) => { if (e.target.id === "adm-form") { e
 
 function navHtml() {
   if (gate()) return "";
-  const items = [["home", "home"], ["library", "book"], ["events", "cal"], ...(CFG.API_URL ? [isAdmin() ? ["admin", "settings"] : ["support", "support"], ["account", "user"]] : [])];
+  const items = isAdmin() ? [["admin", "settings"], ["account", "user"]] : [["home", "home"], ["library", "book"], ["events", "cal"], ...(CFG.API_URL ? [["support", "support"], ["account", "user"]] : [])];
   const dot = (on) => (on ? `<i aria-label="new" style="position:absolute;top:10px;inset-inline-start:calc(50% + 6px);width:10px;height:10px;border-radius:50%;background:#E5484D;border:2px solid #fff"></i>` : "");
   return `<nav>${items.map(([k, ic]) => `<button data-go="${k}" class="${S.tab === k || (k === "home" && CHILD.includes(S.tab)) ? "on" : ""}"${S.tab === k ? ' aria-current="page"' : ""}${k === "support" || k === "admin" ? ' style="position:relative"' : ""}>${icon(ic)}<span>${t(k)}</span>${dot(k === "support" && S.user && answeredCount() > Number(store.get("supSeen", "0")) && S.tab !== "support")}${dot(k === "admin" && unansweredAdm() > 0 && S.tab !== "admin")}</button>`).join("")}</nav>`;
 }
@@ -981,6 +981,7 @@ function render(keep) {
   const vis = visClubs();
   if (vis.length && !vis.some((c) => c.id === S.club)) { S.club = vis[0].id; store.set("club", S.club); }
   if (gate()) S.tab = "account";
+  else if (isAdmin() && !["admin", "account"].includes(S.tab)) S.tab = "admin";
   const prev = keep ? document.querySelector("main")?.scrollTop : 0;
   const root = document.documentElement;
   const ci = clubInfo(S.club);
