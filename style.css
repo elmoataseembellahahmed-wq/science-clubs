@@ -75,3 +75,27 @@ main>*{flex-shrink:0}
 button.card{font:inherit;cursor:pointer}
 
 .top .glyph{width:48px;height:48px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Sora',sans-serif;font-weight:700;font-size:18px}
+
+/* admin */
+.form select{height:48px;border:1px solid var(--line);border-radius:12px;padding:0 12px;font:inherit;background:#fff}
+.ta{border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;background:#fff;resize:vertical;width:100%}
+.checks{display:flex;flex-wrap:wrap;gap:8px}
+.chk{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1px solid #D9D6E4;border-radius:999px;background:#fff;font-size:14px;font-weight:600;margin:0}
+.form .chk{margin-top:0}
+.chk input,.form .chk input{width:18px;height:18px;padding:0;border:0;border-radius:4px;accent-color:var(--accent)}
+.row-actions{display:flex;gap:8px;flex-shrink:0}
+.mini{min-height:40px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);font-weight:600;font-size:13px}
+.mini.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.mini.danger{color:#B42318;border-color:#F3C5C0}
+
+.adm-add{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.adm-add .btn{margin:0;padding:0 6px;font-size:14px}
+.qrow{display:flex;gap:8px;align-items:center}
+.qo{flex:1;min-width:0}
+.form input[type=radio]{width:22px;height:22px;padding:0;border:0;accent-color:var(--accent);flex-shrink:0}
+.opt{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 12px;border:1px solid #D9D6E4;border-radius:12px;background:#fff;font-size:14px}
+.opt input{width:22px;height:22px;accent-color:var(--accent);flex-shrink:0;margin:0}
+.opt:has(input:checked){border-color:var(--accent);background:var(--tint)}
+.badge.ok{background:#E3F5E9;color:#14532D}
+.badge.no{background:#FDE8E8;color:#7A1C1C}
+input[type=file]{font:inherit;padding:10px 0}
