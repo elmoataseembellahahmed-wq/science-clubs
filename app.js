@@ -6,13 +6,13 @@ const store = {
 };
 
 const T = {
-  en: { app: "Science Clubs", tagline: "Your school clubs in one place", home: "Home", library: "Library", events: "Events", joint: "Joint",
+  en: { app: "STEM Assiut Clubs", tagline: "Your school clubs in one place", home: "Home", library: "Library", events: "Events", joint: "Joint",
     chemistry: "Chemistry", physics: "Physics", deutsch: "Deutsch", mechanics: "Mechanics", capstone: "Capstone", math: "Math", next: "Next meeting", noNext: "No upcoming meetings yet", files: "Files", videos: "Videos", refs: "References",
     filesSub: "Notes, slides, worksheets", videosSub: "Lessons and lab demos", refsSub: "Links and further reading", jointSpace: "Joint space", jointSub: "Shared with other clubs",
     recent: "Recently added", all: "All", search: "Search the library", empty: "Nothing here yet.", upcoming: "Upcoming", jointTitle: "Where our clubs meet",
     jointBlurb: "Topics, events and materials your club shares with other clubs.", shared: "SHARED WITH OTHER CLUBS", sharedMaterials: "Shared materials", jointEvents: "Joint events",
     refreshing: "Refreshing…", updated: "Updated ✓", support: "Support", supportSub: "Ask us anything, we reply here", askTitle: "Ask the team", askPh: "Write your question…", send: "Send", sending: "Sending…", sentOk: "Sent. We will reply here.", myQuestions: "Your questions", teamReply: "Team reply", waiting: "Waiting for a reply", noQuestions: "No questions yet.", signInToAsk: "Sign in to contact the team", supportErr: "Could not load your questions.", err_empty: "Write your question first.", err_too_long: "Message is too long (max 500 characters).", err_too_fast: "You sent many messages. Try again in a little while.", offline: "You're offline. Showing the last saved content.", refresh: "Refresh", lang: "عربي", jointBadge: "Joint", account: "Profile", signIn: "Sign in", createAccount: "Create account", username: "Username", fullName: "Full name", password: "Password", signOut: "Sign out", myResults: "My results", noResults: "No results yet. Your score appears here a few minutes after you finish a quiz.", signInToSee: "Sign in to see your quiz results", signInFirst: "Sign in first to take this quiz", accountNote: "Only you can see your results. Use the same username when a quiz asks for it.", hello: "Signed in as", loadingRes: "Loading your results...", resultsErr: "Could not load results. Try again later.", err_invalid_username: "Username must be 3-20 letters, numbers, dot, dash or underscore.", err_invalid_password: "Password must be at least 6 characters.", err_invalid_name: "Please enter your name.", err_taken: "This username is already taken.", err_bad_credentials: "Wrong username or password.", err_locked: "Too many attempts. Try again in 10 minutes.", err_generic: "Something went wrong. Check your connection and try again.", pleaseWait: "Please wait...", accountSub: "Your private quiz results", quizTakeHint: "Sign in first", general: "General", items: "items", los: "LOs", losSub: "Files, videos and more, by LO", refsTitle: "References", refsPageSub: "Links and further reading", back: "Back", download: "Download", downloading: "Downloading…", dlNote: "Download started. Big files can take a few minutes depending on your internet. Follow the progress in your phone's notifications and find the file in Downloads.", openExt: "Open in browser", revision: "Revision", revisionTitle: "Revision & Exams", revisionMaterial: "Revision files", exams: "Exams", revisionSub: "Summaries, revision files and exams", revisionAll: "Revision files and exams from your club and joint ones", quizzes: "Quizzes", quizzesSub: "Test yourself", quizTitle: "Quizzes", quizAll: "Quizzes from your club and joint quizzes" },
-  ar: { app: "نوادي العلوم", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
+  ar: { app: "STEM Assiut Clubs", tagline: "نوادي مدرستك في مكان واحد", home: "الرئيسية", library: "المكتبة", events: "المواعيد", joint: "مشترك",
     chemistry: "الكيمياء", physics: "الفيزياء", deutsch: "الألماني", mechanics: "الميكانيكا", capstone: "الكابستون", math: "الرياضيات", next: "الاجتماع القادم", noNext: "مفيش اجتماعات قادمة لسه", files: "ملفات", videos: "فيديوهات", refs: "مراجع",
     filesSub: "ملخصات وسلايدات وشيتات", videosSub: "شرح وتجارب معملية", refsSub: "لينكات وقراءة إضافية", jointSpace: "المساحة المشتركة", jointSub: "مشترك مع نوادي تانية",
     recent: "أُضيف حديثًا", all: "الكل", search: "ابحث في المكتبة", empty: "مفيش حاجة هنا لسه.", upcoming: "القادم", jointTitle: "حيث تلتقي نوادينا",
@@ -86,7 +86,7 @@ Object.assign(T.ar, {
   approvedOk: "تمت الموافقة ✓", rejectedOk: "تم الرفض", by: "من", noRequests: "مفيش طلبات.",
 });
 
-const VERSION = "2026.10.10-auto-update";
+const VERSION = "2026.10.11-rename";
 const CLUB_LIST = CFG.CLUBS || [{ id: "chemistry", color: "#6D3FC7", tint: "#F1EBFC" }, { id: "physics", color: "#1F5FD1", tint: "#E8F0FD" }];
 const clubInfo = (id) => CLUB_LIST.find((c) => c.id === id);
 const S = {
@@ -989,8 +989,8 @@ function render(keep) {
   root.dataset.club = S.club; root.lang = S.lang; root.dir = S.lang === "ar" ? "rtl" : "ltr";
   document.querySelector('meta[name="theme-color"]').content = clubColor(S.club);
   const screens = { home, library, events: eventsScreen, quizzes: quizzesScreen, revision: revisionScreen, references: referencesScreen, joint: jointScreen, support: supportScreen, admin: adminScreen, quiz: quizScreen, account: accountScreen };
-  const titles = { home: t("app"), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), support: t("support"), admin: t("admin"), quiz: t("quizzes"), account: t("account") };
-  const subs = { home: t("tagline"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: t("jointSub"), support: t("supportSub"), admin: t("adminSub"), quiz: "", account: t("accountSub") };
+  const titles = { home: t(S.club), library: t("library"), references: t("refsTitle"), events: t("events"), quizzes: t("quizzes"), revision: t("revisionTitle"), joint: t("jointSpace"), support: t("support"), admin: t("admin"), quiz: t("quizzes"), account: t("account") };
+  const subs = { home: t("app"), library: t("losSub"), references: t("refsPageSub"), events: t("upcoming"), quizzes: t("quizzesSub"), revision: t("revisionSub"), joint: t("jointSub"), support: t("supportSub"), admin: t("adminSub"), quiz: "", account: t("accountSub") };
   const showSwitch = !["joint", "account", "support", "admin", "quiz"].includes(S.tab);
   const logo = ["joint", "account", "support", "admin", "quiz"].includes(S.tab) ? "" : (ci.logo || CFG.LOGOS?.[S.club]) ? `<img src="${esc(ci.logo || CFG.LOGOS[S.club])}" alt="">` : `<div class="glyph" aria-hidden="true" style="background:${ci.color}">${esc(ci.glyph || t(S.club).slice(0, 2))}</div>`;
   const back = CHILD.includes(S.tab) ? `<button class="icon-btn" data-go="home" aria-label="${t("back")}">${S.lang === "ar" ? "→" : "←"}</button>` : "";
